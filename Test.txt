@@ -3,5 +3,5 @@ this is to check whether git works
 
 Hammaad- Works
 Arkash-  Works
-Sevindu-
+Sevindu- works
 Praveen-
