@@ -162,6 +162,9 @@ def main():
 
     local_file_salesScaler_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/scaler.joblib', local_directory)
     print("Scaler file downloaded")
+    
+    local_file_economicModel = download_file_from_s3(bucket_name, 'economic-bucket/gbp-srilanka-model/gbpSLModel.pkl', local_directory)
+    print("Scaler file downloaded")
 
     date=current_date
     rainfall=float(f"{rainfall[0]:.2f}")
@@ -201,6 +204,12 @@ def main():
     results = results[["Product Name", "Units Sold"]]
     print("Prediciton Complete")
     results.to_csv("SalesPredictions.csv",index=False)
+    economicModel = pickle.load(open(local_file_economicModel, 'rb'))
+    forecast_steps = 1
+    forecast = economicModel.get_forecast(steps=forecast_steps)
+    forecast_values = forecast.predicted_mean
+    gbpValue=forecast_values[0]
+    print("GBP Value: ",gbpValue)
     shutil.rmtree("downloads")
 
 
