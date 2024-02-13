@@ -3,6 +3,8 @@ import pickle
 import os
 from datetime import datetime
 import pandas as pd
+import datetime
+import joblib
 import requests
 
 def download_file_from_s3(bucket_name, object_key, local_directory):
@@ -24,9 +26,11 @@ def download_file_from_s3(bucket_name, object_key, local_directory):
     print(f"File {object_key} downloaded to {local_file_path}")
     return local_file_path
 
+import datetime
+
 def get_current_date():
     # Get current date
-    current_date = datetime.now().date()
+    current_date = datetime.datetime.now().date()
 
     # Extract year, month, and day components
     year = current_date.year
@@ -34,7 +38,8 @@ def get_current_date():
     day = current_date.day
 
     # Combine inputs into a datetime object
-    return datetime(year, month, day)
+    return datetime.datetime(year, month, day)
+
 
 def convert_date_to_float(date):
     # Convert datetime to float
@@ -51,6 +56,65 @@ def get_temperature(api_key, city_name):
 def predict_rainfall(user_data, weather_model_path):
     weather_model = pickle.load(open(weather_model_path,'rb'))
     return weather_model.predict(user_data)
+def weekOfYearCalculator(date):
+    # Get the week of the year
+    week_of_year = date.isocalendar()[1]
+    return week_of_year
+
+def dayOfWeekCalculator(date):
+    # Get the day of the week
+    day_of_week = date.isocalendar()[2]
+    return day_of_week
+
+def IsAHoliday(dayOfWeek):
+    if dayOfWeek == 6 or dayOfWeek == 7:
+        dayType = 1
+    else:
+        dayType = 0
+    return dayType
+
+def monthCalculator(date):
+    # Get the month
+    month = date.month
+    return month
+
+def yearCalculator(date):
+    # Get the year
+    year = date.year
+    return year
+
+def dayCalculator(date):
+    # Get the day
+    day = date.day
+    return day
+def initialiseValuesToDataset(date, rainfall, dataset):
+    weekOfYear = weekOfYearCalculator(date)
+    dayOfWeek = dayOfWeekCalculator(date)
+    isHoliday = IsAHoliday(dayOfWeek)
+    day = dayCalculator(date)
+    month = monthCalculator(date)
+    year = yearCalculator(date)
+    dataset["Week_of_Year"].fillna(int(weekOfYear), inplace=True)
+    dataset["Week_of_Year"] = dataset["Week_of_Year"].astype(int)
+
+    dataset["DayOfWeek"].fillna(int(dayOfWeek), inplace=True)
+    dataset["DayOfWeek"] = dataset["DayOfWeek"].astype(int)
+
+    dataset["IsAHoliday"].fillna(isHoliday, inplace=True)
+    dataset["IsAHoliday"] = dataset["IsAHoliday"].astype(int)
+
+    dataset["Day"].fillna(int(day), inplace=True)
+    dataset["Day"] = dataset["Day"].astype(int)
+
+    dataset["Month"].fillna(int(month), inplace=True)
+    dataset["Month"] = dataset["Month"].astype(int)
+
+    dataset["Year"].fillna(int(year), inplace=True)
+    dataset["Year"] = dataset["Year"].astype(int)
+
+    dataset["Rainfall"].fillna(rainfall, inplace=True)
+    return dataset
+
 
 def main():
     # Constants
@@ -62,6 +126,7 @@ def main():
 
     # Download the file from S3
     local_file_path = download_file_from_s3(bucket_name, object_key, local_directory)
+    
 
     # Get current date
     current_date = get_current_date()
@@ -81,6 +146,55 @@ def main():
     # Predict rainfall
     rainfall = predict_rainfall(user_data, local_file_path)
     print(f'Predicted Average Rainfall: {rainfall[0]:.2f}')
+
+    
+    # Download the file from S3
+    local_file_salesEncoder_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/encoder.joblib', local_directory)
+    print("Predictions file downloaded")
+
+    local_file_salesPredictonTemplate_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/Predictions.csv', local_directory)
+    print("Predictions file downloaded")
+
+    local_file_salesModel_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/salesModel.pkl', local_directory)
+    print("Sales model file downloaded")
+
+    local_file_salesScaler_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/scaler.joblib', local_directory)
+    print("Scaler file downloaded")
+
+    date=current_date
+    rainfall=float(f"{rainfall[0]:.2f}")
+    new_record = pd.read_csv(local_file_salesPredictonTemplate_path)
+    new_record=initialiseValuesToDataset(date,rainfall,new_record)
+    results=new_record
+    print("Unpacking sales model files")
+    scaler = joblib.load(local_file_salesScaler_path)# Load the scaler
+    encoder = joblib.load(local_file_salesEncoder_path)# Load the encoder
+    model = pickle.load(open(local_file_salesModel_path, 'rb'))# Load the model
+
+    columns_to_drop = ["Product Name", "Units Sold"]#not needed for prediction
+    new_record = new_record.drop(columns=columns_to_drop)  
+    print("Preprocessing data")
+    # Separate numeric and categorical columns
+    numeric_cols_new_record = new_record.select_dtypes(include=['number'])#get the numeric columns and store in a variable
+    categorical_cols_new_record = new_record.select_dtypes(exclude=['number'])#get the categorical columns and store in a variable
+
+    # Preprocess the numeric columns
+    numeric_cols_new_record_scaled = scaler.transform(numeric_cols_new_record)
+    
+    # Preprocess the categorical columns
+    categorical_cols_new_record_encoded = pd.DataFrame(encoder.transform(categorical_cols_new_record), columns=list(encoder.get_feature_names_out(['Category'])))#get ehe encoded version
+
+    # Combine the preprocessed numeric and categorical columns
+    new_record[numeric_cols_new_record.columns] = numeric_cols_new_record_scaled#set the scaled values and the encoded values to the new_record dataframe
+    new_record=pd.concat([new_record, categorical_cols_new_record_encoded], axis=1)
+    new_record.drop(columns="Category", inplace=True)
+
+    # Make predictions
+    predicted_units_sold = model.predict(new_record)#predicts the units sold
+    
+    results["Units Sold"] = predicted_units_sold.astype(int)#converts the predicted units sold to int and stores in the results dataframe
+    print("Predicted units sold",predicted_units_sold)
+    results.to_csv("Results.csv",index=False)
 
 if __name__ == "__main__":
     main()
