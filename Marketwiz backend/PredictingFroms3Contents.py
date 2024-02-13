@@ -6,6 +6,8 @@ import pandas as pd
 import datetime
 import joblib
 import requests
+import numpy as np
+import shutil
 
 def download_file_from_s3(bucket_name, object_key, local_directory):
     # Initialize the S3 client
@@ -173,28 +175,34 @@ def main():
 
     columns_to_drop = ["Product Name", "Units Sold"]#not needed for prediction
     new_record = new_record.drop(columns=columns_to_drop)  
-    print("Preprocessing data")
+
     # Separate numeric and categorical columns
     numeric_cols_new_record = new_record.select_dtypes(include=['number'])#get the numeric columns and store in a variable
     categorical_cols_new_record = new_record.select_dtypes(exclude=['number'])#get the categorical columns and store in a variable
 
-    # Preprocess the numeric columns
+    # Preprocess the numeric columns Scale the numeric columns of the new record
     numeric_cols_new_record_scaled = scaler.transform(numeric_cols_new_record)
-    
-    # Preprocess the categorical columns
-    categorical_cols_new_record_encoded = pd.DataFrame(encoder.transform(categorical_cols_new_record), columns=list(encoder.get_feature_names_out(['Category'])))#get ehe encoded version
+
+    # Encode the categorical columns of the new record
+    categorical_cols_new_record_encoded = pd.DataFrame(encoder.transform(categorical_cols_new_record).toarray(),
+                                                    columns=encoder.get_feature_names_out(['Category']))
 
     # Combine the preprocessed numeric and categorical columns
-    new_record[numeric_cols_new_record.columns] = numeric_cols_new_record_scaled#set the scaled values and the encoded values to the new_record dataframe
-    new_record=pd.concat([new_record, categorical_cols_new_record_encoded], axis=1)
+    numeric_cols=numeric_cols_new_record.columns
+    new_record[numeric_cols] = numeric_cols_new_record_scaled
+    new_record = pd.concat([new_record, categorical_cols_new_record_encoded], axis=1)
     new_record.drop(columns="Category", inplace=True)
 
     # Make predictions
-    predicted_units_sold = model.predict(new_record)#predicts the units sold
-    
-    results["Units Sold"] = predicted_units_sold.astype(int)#converts the predicted units sold to int and stores in the results dataframe
-    print("Predicted units sold",predicted_units_sold)
-    results.to_csv("Results.csv",index=False)
+    predicted_units_sold = model.predict(new_record)
+
+    # Store the predicted units sold in the results dataframe
+    results["Units Sold"] = np.abs(predicted_units_sold.astype(int))
+    results = results[["Product Name", "Units Sold"]]
+    print("Prediciton Complete")
+    results.to_csv("SalesPredictions.csv",index=False)
+    shutil.rmtree("downloads")
+
 
 if __name__ == "__main__":
     main()
