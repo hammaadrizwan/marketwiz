@@ -119,6 +119,18 @@ def initialiseValuesToDataset(date, rainfall, dataset):
 
 
 def main():
+
+    # Specify the path of the file you want to remove
+    file_path = 'SalesPredictions.csv'
+
+    # Check if the file exists before attempting to remove it
+    if os.path.exists(file_path):
+        # Remove the file
+        os.remove(file_path)
+        print(f"{file_path} has been successfully removed.")
+    else:
+        print(f"The file {file_path} does not exist.")
+
     # Constants
     bucket_name = 'marketwiz-s3-mumbai'
     object_key = 'weather-bucket/colombo-model/weatherModel.pkl'
@@ -164,7 +176,7 @@ def main():
     print("Scaler file downloaded")
     
     local_file_economicModel = download_file_from_s3(bucket_name, 'economic-bucket/gbp-srilanka-model/gbpSLModel.pkl', local_directory)
-    print("Scaler file downloaded")
+    print("Economic model downloaded")
 
     date=current_date
     rainfall=float(f"{rainfall[0]:.2f}")
@@ -208,7 +220,7 @@ def main():
     forecast_steps = 1
     forecast = economicModel.get_forecast(steps=forecast_steps)
     forecast_values = forecast.predicted_mean
-    gbpValue=forecast_values[0]
+    gbpValue=float(f"{forecast_values[0]:.2f}")
     print("GBP Value: ",gbpValue)
     shutil.rmtree("downloads")
 
