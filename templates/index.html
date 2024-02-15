@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions Table</title>
+</head>
+<body>
+    <h1>Predictions table</h1>
+    <table border="1">
+        <tr>
+            {% for column in columns %}
+                <th>{{ column }}</th>
+            {% endfor %}
+        </tr>
+
+        {% for row in data %}
+            <tr>
+                {% for item in row %}
+                    <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
