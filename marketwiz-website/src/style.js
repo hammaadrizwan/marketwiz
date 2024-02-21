@@ -1,3 +1,4 @@
+//all the styles neede for the app
 const styles = {
     boxWidth: "xl:max-w-[1280px] w-full",
   
