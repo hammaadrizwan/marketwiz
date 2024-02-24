@@ -4,9 +4,7 @@ import {siteLogo} from "../assets";
 import {navLinks} from "../constants";
 const Navbar = () => {
     return (
-        <nav className="w-full flex py-6 justify-between items-center navbar">
-            <img src={siteLogo} alt="marketwiz" className="w" />
-        </nav>
+        <h1></h1>
     )
 }
 
