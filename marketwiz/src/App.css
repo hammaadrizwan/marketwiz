@@ -1,0 +1,15 @@
+/*Main style sheet for index.html*/
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "CocoSharp Trial";
+  src: url(../assets/Coco-Sharp-Regular-trial.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: "CocoSharp Trial","Poppins", sans-serif;
+}
+
+
