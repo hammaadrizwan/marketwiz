@@ -9,7 +9,7 @@ function Navbar() {
         <li>Home</li>
         <li>About</li>
         <li>Contact</li>
-        <li className='nav-login-button'>Login</li>
+        <div className='nav-login-button'>Login</div>
       </ul>
       
     </nav>
