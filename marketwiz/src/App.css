@@ -24,7 +24,7 @@ body {
 .nav-list{
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 40px;
   list-style: none;
   color: #E2E2E2;
   font-size: 18px;
@@ -35,7 +35,7 @@ body {
 
 .nav-login-button{
   display: flex;
-  padding: 14px 24px;
+  padding: 8px 24px;
   align-items: center;
   gap: 8px;
   border-radius: 12px;
@@ -47,4 +47,46 @@ body {
   line-height: normal;
 }
 
+.hero-title{
+  text-align: center;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128%; /* 97.28px */
+  letter-spacing: -0.76px;
+  background: linear-gradient(262deg, #B9C06B -15.24%, #8BC9B4 73.7%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.hero-subtitle{
+  color: #F0F0F0;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 152.3%; /* 27.414px */
+}
+
+.hero-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 120px 15px;
+
+  background-color: #28292B;
+}
+
+.hero-learnmore-button{
+  border-radius: 12px;
+  border: 2px solid #FFF;
+  box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 8px 24px;
+  align-items: center;
+  gap: 8px;
+  color: #FFF;
+  margin-top: 40px;
+}
