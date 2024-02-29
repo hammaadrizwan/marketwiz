@@ -122,7 +122,7 @@ def main():
 
     # Specify the path of the file you want to remove
     file_path = 'SalesPredictions.csv'
-
+    economic_predictions_path = 'SalesPredictions.csv'
     # Check if the file exists before attempting to remove it
     if os.path.exists(file_path):
         # Remove the file
@@ -130,7 +130,12 @@ def main():
         print(f"{file_path} has been successfully removed.")
     else:
         print(f"The file {file_path} does not exist.")
-
+    if os.path.exists(economic_predictions_path):
+        # Remove the file
+        os.remove(economic_predictions_path)
+        print(f"{economic_predictions_path} has been successfully removed.")
+    else:
+        print(f"The file {file_path} does not exist.")
     # Constants
     bucket_name = 'marketwiz-s3-mumbai'
     object_key = 'weather-bucket/colombo-model/weatherModel.pkl'
@@ -174,7 +179,23 @@ def main():
 
     local_file_salesScaler_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/scaler.joblib', local_directory)
     print("Scaler file downloaded")
+
+    local_file_economicModel = download_file_from_s3(bucket_name, 'economic-bucket/gbp-srilanka-model/gbpSLModel.pkl', local_directory)
+
+    print("Economic model file downloaded")
+
+    order = (1, 0, 1)
+    economicModel = pickle.load(open(local_file_economicModel, 'rb'))
+
+    forecast_steps = 31
+    forecast = economicModel.get_forecast(steps=forecast_steps)
+    forecast_values = forecast.predicted_mean
     
+    gbpPredictions = []
+    for i in range(forecast_steps): 
+        gbpPredictions.append(forecast_values.iloc[i])
+    pd.DataFrame(gbpPredictions).to_csv("gbpPredictions.csv",index=False)
+
 
     date=current_date
     rainfall=float(f"{rainfall[0]:.2f}")
@@ -214,7 +235,6 @@ def main():
     results = results[["Product Name", "Units Sold"]]
     print("Prediciton Complete")
     results.to_csv("SalesPredictions.csv",index=False)
-
     shutil.rmtree("downloads")
 
 
