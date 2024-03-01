@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'CocoSharp Trial';
+    src: url('Coco-Sharp-Regular-trial.ttf') format('truetype');
+    /* Adjust the path accordingly */
+    font-weight: 400;
+    font-style: normal;
+  }
