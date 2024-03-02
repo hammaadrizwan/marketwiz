@@ -4,12 +4,16 @@
 }
 @font-face {
   font-family: "CocoSharp Trial";
-  src: url(../assets/Coco-Sharp-Regular-trial.ttf);
+  src: url(../assets/fonts/Coco-Sharp-Regular-trial.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Meduim.ttf);
 }
 
 body {
   margin: 0;
-  font-family: "CocoSharp Trial","Poppins", sans-serif;
+  font-family: "CocoSharp Trial";
 }
 .nav{
   display: flex;
@@ -114,7 +118,6 @@ body {
     gap: 10px;
     flex-shrink: 0;
     background: #F0F0F0;
-    box-shadow: 13px 0px 12px 0px rgba(0, 0, 0, 0.19);
     border-radius: 42px;
 }
 
@@ -418,7 +421,8 @@ body {
   justify-content: center;
   flex-shrink: 0;
   align-self: center;
-  text-align: center;
+  text-align: left;
+  padding: 20px;
 }
 .contact-right-text > a{
   width: 156px;
@@ -445,3 +449,19 @@ body {
   text-align: center;
 }
 
+.footer{
+  display: flex;
+  background: #28292B;
+  justify-content: space-between;
+  padding: 24px 120px;
+  align-items: center;
+  align-self: stretch;
+}
+
+.footer-text{
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

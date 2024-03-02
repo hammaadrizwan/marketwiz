@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import Info from './components/Info'
 import Team from './components/Team'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 /* Add the navbar hero team contacts and footer here */
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Info />
       <Team />
       <Contact/>
+      <Footer />
       
     </>
   )
