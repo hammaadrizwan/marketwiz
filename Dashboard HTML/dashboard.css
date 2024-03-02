@@ -1,7 +1,20 @@
 @font-face {
     font-family: 'CocoSharp Trial';
     src: url('Coco-Sharp-Regular-trial.ttf') format('truetype');
-    /* Adjust the path accordingly */
     font-weight: 400;
     font-style: normal;
-  }
+}
+
+@font-face {
+  font-family: 'CocoSharp Trial';
+  src: url('Coco-Sharp-Bold-trial.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
