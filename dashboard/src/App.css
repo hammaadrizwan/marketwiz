@@ -629,6 +629,15 @@ body {
 
 
 /* Large sales table */
+.full-table{
+  width: 951px; 
+  height: 539px; 
+  background: rgba(51.15, 71.64, 112.62, 0); 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+}
+
 .units-full-title{
   width: 596px;
   height: 44px;
@@ -637,6 +646,282 @@ body {
   font-weight: 800;
   word-wrap: break-word;
 }
+
+.full-table-sales{
+  width: 939px; 
+  height: 443px; 
+  position: relative;
+}
+
+.full-tables-sales-cover{
+  width: 929.08px; 
+  height: 443px; 
+  left: 9.92px; 
+  top: 0px; 
+  position: absolute; 
+  background: #353535; 
+  border-radius: 53px
+}
+
+.first-product{
+  width: 356.96px; 
+  height: 30.72px; 
+  left: 75.36px; 
+  top: 117.94px; 
+  position: absolute;
+}
+
+.first-product-name-span{
+  color: white; 
+  font-size: 25px; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.first-product-val-span{
+  color: white; 
+  font-size: 25px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.second-product{
+  width: 356.96px; 
+  height: 30.72px; 
+  left: 75.36px; 
+  top: 178.39px; 
+  position: absolute;
+}
+
+.second-product-name-span{
+  color: white; 
+  font-size: 25px;
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.second-product-val-span{
+  color: white; 
+  font-size: 25px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.third-product{
+  width: 356.96px; 
+  height: 30.72px; 
+  left: 75.36px; 
+  top: 242.81px; 
+  position: absolute;
+}
+
+.third-product-name-span{
+  color: white; 
+  font-size: 25px; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.third-product-val-span{
+  color: white; 
+  font-size: 25px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.fourth-product{
+  width: 356.96px; 
+  height: 30.72px; 
+  left: 75.36px; 
+  top: 306.23px; 
+  position: absolute;
+}
+
+.fourth-product-name-span{
+  color: white; 
+  font-size: 25px; 
+  font-family: CocoSharp Trial; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.fourth-product-val-span{
+  color: white; 
+  font-size: 25px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.fifth-product{
+  width: 464.05px; 
+  height: 30.72px; 
+  left: 75.36px; 
+  top: 367.68px; 
+  position: absolute;
+}
+
+.fifth-product-name-span{
+  color: white; 
+  font-size: 25px; 
+  font-family: CocoSharp Trial; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.fifth-product-val-span{
+  color: white; 
+  font-size: 25px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.first-product-quantity{
+  width: 49.58px; 
+  height: 33.70px; 
+  left: 703.01px; 
+  top: 110.01px; 
+  position: absolute; 
+  text-align: center;
+   color: white; 
+   font-size: 29px; 
+   font-family: Product Sans; 
+   font-weight: 700; 
+   text-transform: capitalize; 
+   word-wrap: break-word;
+}
+
+.second-product-quantity{
+  width: 49.58px; 
+  height: 33.70px; 
+  left: 704px; 
+  top: 176.41px; 
+  position: absolute; 
+  text-align: center; 
+  color: white; 
+  font-size: 29px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.third-product-quantity{
+  width: 49.58px; 
+  height: 33.70px; 
+  left: 704px; 
+  top: 239.83px; 
+  position: absolute; 
+  text-align: center; 
+  color: white; 
+  font-size: 29px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.fourth-product-quantity{
+  width: 49.58px; 
+  height: 33.70px; 
+  left: 703.01px; 
+  top: 298.31px; 
+  position: absolute; 
+  text-align: center; 
+  color: white; 
+  font-size: 29px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.fifth-product-quantity{
+  width: 49.58px; 
+  height: 33.70px; 
+  left: 703.01px; 
+  top: 368.67px; 
+  position: absolute; 
+  text-align: center; 
+  color: white; 
+  font-size: 29px; 
+  font-family: Product Sans; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.full-sales-table-header{
+  width: 929.08px; 
+  height: 72.35px; 
+  left: 9.92px; 
+  top: 0px; 
+  position: absolute;
+}
+
+.full-sales-table-header-cover-1{
+  width: 929.08px; 
+  height: 72.35px; 
+  left: 0px; 
+  top: 0px; 
+  position: absolute; 
+  background: #E3E87C; 
+  border-radius: 71px;
+}
+
+.full-sales-table-header-cover-2{
+  width: 929.08px; 
+  height: 35.27px; 
+  left: 0px; 
+  top: 37.08px; 
+  position: absolute; 
+  background: #E3E87C;
+}
+
+.full-sales-table-left-header{
+  width: 338.12px; 
+  height: 26.76px; 
+  left: 0px; 
+  top: 25.77px; 
+  position: absolute; 
+  text-align: center; 
+  color: black; 
+  font-size: 29px; 
+  font-family: CocoSharp Trial; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
+.full-sales-table-right-header{
+  width: 247.89px; 
+  height: 26.76px; 
+  left: 603.86px; 
+  top: 26.76px; 
+  position: absolute; 
+  text-align: center; 
+  color: black; 
+  font-size: 29px; 
+  font-family: CocoSharp Trial; 
+  font-weight: 700; 
+  text-transform: capitalize; 
+  word-wrap: break-word;
+}
+
 
 
 /* Download predictions section */

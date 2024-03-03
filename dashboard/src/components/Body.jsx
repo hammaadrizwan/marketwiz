@@ -21,7 +21,7 @@ function Body() {
                                         Rainfall Predicted For Today
                                     </span>
                                     <span className='rainfall-measurement-span'>
-                                        mm
+                                        (mm)
                                     </span>
                                     <span className='rainfall-extra-span'/>
                                 </div>
@@ -44,6 +44,7 @@ function Body() {
                                     No Of Days
                                 </div>
                             </div>
+                            <br/>
                             <div className='predict-price-input-boxes'>
                                 <div className='predict-price-input-boxes-cover'>
                                     <div className='predict-price-input-box-lkr-1'>
@@ -65,12 +66,13 @@ function Body() {
                                                 <p>3</p>
                                             </div>
                                             <div className='predict-price-input-box-days-plus'>
-                                                <p>3</p>
+                                                <p>+</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <br/>
                             <div className='predict-price-button'>
                                 <div className='predict-price-button-cover'>
                                     <div className='predict-price-button-top'/>
@@ -145,18 +147,95 @@ function Body() {
             </div>
 
             
-            
-            <div className='units-full'>
-                <div className='units-full-title'>
-                    <p>Predicted Units Sold For Today</p>
-                </div>
+            <div className='full-table'>
+                <div className='units-full'>
+                    <div className='units-full-title'>
+                        <p>Predicted Units Sold For Today</p>
+                    </div>
 
-                <div className='download-results'>
-                    <div className='download-results-text'>
-                        <p>Download Results Now</p>
+                    <div className='full-table-sales'>
+                        <div className='full-tables-sales-cover'/>
+                        <div className='first-product'>
+                            <span className='first-product-name-span'>
+                                Ambewela Yoghurt
+                            </span>
+                            <span className='first-product-val-span'>
+                                80ML
+                            </span>
+                            <br/>
+                        </div>
+                        <div className='second-product'>
+                            <span className='second-product-name-span'>
+                                Highland Set Yoghurt
+                            </span>
+                            <span className='second-product-val-span'>
+                                80ML
+                            </span>
+                            <br/>
+                        </div>
+                        <div className='third-product'>
+                            <span className='third-product-name-span'>
+                                Prima Wheat Flour
+                            </span>
+                            <span className='third-product-val-span'>
+                                1KG
+                            </span>
+                            <br/>
+                        </div>
+                        <div className='fourth-product'>
+                            <span className='fourth-product-name-span'>
+                                Harischandra Coffee
+                            </span>
+                            <span className='fourth-product-val-span'>
+                                250G
+                            </span>
+                            <br/>
+                        </div>
+                        <div className='fifth-product'>
+                            <span className='fifth-product-name-span'>
+                                Elephant House Vanilla Ice Cream
+                            </span>
+                            <span className='fifth-product-val-span'>
+                                1L
+                            </span>
+                            <br/>
+                        </div>
+
+                        <div className='first-product-quantity'>
+                            <p>20</p>
+                        </div>
+                        <div className='second-product-quantity'>
+                            <p>11</p>
+                        </div>
+                        <div className='third-product-quantity'>
+                            <p>14</p>
+                        </div>
+                        <div className='fourth-product-quantity'>
+                            <p>8</p>
+                        </div>
+                        <div className='fifth-product-quantity'>
+                            <p>5</p>
+                        </div>
+                        <div className='full-sales-table-header'>
+                            <div className='full-sales-table-header-cover-1'/>
+                            <div className='full-sales-table-header-cover-2'/>
+                        </div>
+                        <div className='full-sales-table-left-header'>
+                            Product Name
+                        </div>
+                        <div className='full-sales-table-right-header'>
+                            Units Sold
+                        </div>
+                    </div>
+
+                    <div className='download-results'>
+                        <div className='download-results-text'>
+                            <p>Download Results Now</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }
