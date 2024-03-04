@@ -159,6 +159,7 @@ function Body() {
                             <span className='first-product-name-span'>
                                 Ambewela Yoghurt
                             </span>
+                            <p> </p>
                             <span className='first-product-val-span'>
                                 80ML
                             </span>

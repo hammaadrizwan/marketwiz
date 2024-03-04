@@ -10,6 +10,11 @@
   src: url(../assets/fonts/Poppins-Meduim.ttf);
 }
 
+@font-face {
+  font-family: "Product Sans";
+  src: url(../src/assets/ProductSans-Regular.ttf);
+}
+
 body {
   margin: 0;
   font-family: "CocoSharp Trial";
@@ -73,7 +78,7 @@ body {
   width: 959px; 
   height: 513px; 
   justify-content: flex-start; 
-  align-items: flex-start; 
+  align-items: center; 
   gap: 22px; 
   display: inline-flex;
 }
@@ -96,6 +101,9 @@ body {
   width: 448px; 
   height: 111px; 
   position: relative;
+  background-image: url("../src/assets/rainfall.svg");
+  background-size: cover;
+  border-radius: 37px;
 }
 
 .rainfall-bg{
@@ -660,15 +668,21 @@ body {
   top: 0px; 
   position: absolute; 
   background: #353535; 
-  border-radius: 53px
+  border-radius: 53px;
 }
 
 .first-product{
+  display:flex;
+  flex-direction: row;
   width: 356.96px; 
   height: 30.72px; 
   left: 75.36px; 
   top: 117.94px; 
   position: absolute;
+}
+
+.first-product>p{
+  margin-left:5px;
 }
 
 .first-product-name-span{
@@ -689,11 +703,17 @@ body {
 }
 
 .second-product{
+  display:flex;
+  flex-direction: row;
   width: 356.96px; 
   height: 30.72px; 
   left: 75.36px; 
   top: 178.39px; 
   position: absolute;
+}
+
+.second-product>p{
+  margin-left:5px;
 }
 
 .second-product-name-span{
@@ -714,11 +734,17 @@ body {
 }
 
 .third-product{
+  display:flex;
+  flex-direction: row;
   width: 356.96px; 
   height: 30.72px; 
   left: 75.36px; 
   top: 242.81px; 
   position: absolute;
+}
+
+.third-product>p{
+  margin-left:5px;
 }
 
 .third-product-name-span{
@@ -739,11 +765,17 @@ body {
 }
 
 .fourth-product{
+  display:flex;
+  flex-direction: row;
   width: 356.96px; 
   height: 30.72px; 
   left: 75.36px; 
   top: 306.23px; 
   position: absolute;
+}
+
+.fourth-product>p{
+  margin-left:5px;
 }
 
 .fourth-product-name-span{
@@ -765,11 +797,17 @@ body {
 }
 
 .fifth-product{
+  display:flex;
+  flex-direction: row;
   width: 464.05px; 
   height: 30.72px; 
   left: 75.36px; 
   top: 367.68px; 
   position: absolute;
+}
+
+.fifth-product>p{
+  margin-left:5px;
 }
 
 .fifth-product-name-span{
