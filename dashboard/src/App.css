@@ -16,7 +16,6 @@
 }
 
 body {
-  margin: 0;
   font-family: "CocoSharp Trial";
 }
 
@@ -74,13 +73,20 @@ body {
 }
 
 /* All the predictions section */
+.predictions-card-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .predictions-card{
-  width: 959px; 
-  height: 513px; 
-  justify-content: flex-start; 
-  align-items: center; 
-  gap: 22px; 
-  display: inline-flex;
+  display: flex;
+  width: 959px;
+  height: 513px;
+  align-items: flex-start;
+  gap: 22px;
+  flex-shrink: 0;
 }
 
 /* Weather and economy merged sections */
@@ -257,15 +263,18 @@ body {
   height: 74px; 
   border-radius: 50px; 
   justify-content: center; 
-  align-items: center; 
+  align-content: space-between;
   gap: 15px; 
-  display: inline-flex;
+  display: flex;
 }
 
 .predict-price-input-boxes-cover{
   width: 240px; 
   height: 54px; 
   position: relative;
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
 }
 
 .predict-price-input-box-lkr-1{
@@ -308,7 +317,9 @@ body {
 .predict-price-input-box-days{
   width: 130px; 
   height: 53px; 
-  position: relative
+  position: relative;
+  align-content: space-between;
+  justify-content: center;
 }
 
 .predict-price-input-box-days-cover{
@@ -334,7 +345,7 @@ body {
   word-wrap: break-word;
 }
 
-.predict-price-input-box-days-plus{
+.predict-price-input-box-days-val{
   width: 31.89px; 
   height: 23.94px; 
   left: 96.89px; 
@@ -637,6 +648,12 @@ body {
 
 
 /* Large sales table */
+.full-table-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .full-table{
   width: 951px; 
   height: 539px; 
