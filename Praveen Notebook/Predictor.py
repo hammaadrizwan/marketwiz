@@ -18,7 +18,7 @@ def GBP():
     #print(results.summary())
 
     # Forecast for 7 days from today's date
-    forecast_steps = 7
+    forecast_steps = 30
     forecast = results.get_forecast(steps=forecast_steps)
     forecast_values = forecast.predicted_mean
     # predicted exchange rates for the next 7 days
@@ -37,7 +37,7 @@ def JPY():
     #print(results.summary())
 
     # Forecast for 7 days from today's date
-    forecast_steps = 7
+    forecast_steps = 30
     forecast = results.get_forecast(steps=forecast_steps)
     forecast_values = forecast.predicted_mean
     # predicted exchange rates for the next 7 days
@@ -56,7 +56,7 @@ def USD():
     #print(results.summary())
 
     # Forecast for 7 days from today's date
-    forecast_steps = 7
+    forecast_steps = 30
     forecast = results.get_forecast(steps=forecast_steps)
     forecast_values = forecast.predicted_mean
     # predicted exchange rates for the next 7 days
@@ -72,7 +72,7 @@ def main():
     JPY()
     USD()
     for i in range(len(predictions)):
-        if i % 7 != 0:
+        if i % 30 != 0:
             print(predictions[i],end=" ")
         else:
             print()
