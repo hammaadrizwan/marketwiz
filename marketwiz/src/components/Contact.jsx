@@ -37,9 +37,9 @@ function Contact() {
                 <div className="mx-20 contact-right">
                     <div className="contact-right-items">
                         <form ref={form} className="contact-right-text" onSubmit={sendEmail}>
-                            <input className="form-input" placeholder="Enter Your Name" name="name"></input>
-                            <input className="form-input" placeholder="Enter Your Email" name="email"></input>
-                            <input id="bg-input" type="submit" value="Send" className="contact-button hover:drop-shadow-2xl " />
+                            <input className="contact-form-input" placeholder="Enter Your Name" name="name"></input>
+                            <input className="contact-form-input" placeholder="Enter Your Email" name="email"></input>
+                            <input id="contact-bg-input" type="submit" value="Send" className="contact-button hover:drop-shadow-2xl " />
                         </form>
                     </div>
                 </div>

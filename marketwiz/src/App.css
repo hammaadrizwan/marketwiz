@@ -52,7 +52,7 @@ body {
   line-height: normal;
 }
 
-.hero-title{
+.index-hero-title{
   text-align: center;
   font-size: 76px;
   font-style: normal;
@@ -65,7 +65,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.hero-subtitle{
+.index-hero-subtitle{
   color: #F0F0F0;
   text-align: center;
   font-size: 18px;
@@ -74,7 +74,7 @@ body {
   line-height: 152.3%; /* 27.414px */
 }
 
-.hero-items{
+.index-hero-items{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +84,7 @@ body {
   background-color: #28292B;
 }
 
-.hero-learnmore-button{
+.index-hero-learnmore-button{
   border-radius: 12px;
   border: 2px solid #FFF;
   box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.25);
@@ -96,7 +96,7 @@ body {
   margin-top: 40px;
 }
 
-.info{
+.index-info{
   display: flex;
   height: 736px;
   padding: 120px 120px 100px 122px;
@@ -107,7 +107,7 @@ body {
   background: #28292B;
 }
 
-.info-left{
+.index-info-left{
     display: flex;
     width: 550px;
     height: 467px;
@@ -121,7 +121,7 @@ body {
     border-radius: 42px;
 }
 
-.info-right{
+.index-info-right{
   display: flex;
   padding: 14px;
   justify-content: flex-end;
@@ -131,13 +131,13 @@ body {
   margin-left: -45px;
 }
 
-.info-items{
+.index-info-items{
   display: flex;
   align-items: center;
   flex-shrink: 30px;
 }
 
-.info-left-items{
+.index-info-left-items{
   display: flex;
   width: 403px;
   height: 395px;
@@ -147,7 +147,7 @@ body {
   flex-shrink: 0;
 }
 
-.info-left-text{
+.index-info-left-text{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -155,7 +155,7 @@ body {
   align-self: stretch;
 }
 
-.info-left-text > h3{
+.index-info-left-text > h3{
   color: #858585;
   font-size: 16px;
   font-style: normal;
@@ -165,7 +165,7 @@ body {
   text-transform: uppercase;
 }
 
-.info-left-text > h1{
+.index-info-left-text > h1{
   color: #121212;
   font-size: 45px;
   font-style: normal;
@@ -175,7 +175,7 @@ body {
   align-self: stretch;
 }
 
-.info-left-text > h2{
+.index-info-left-text > h2{
   color: #4D4D4D;
   font-size: 18px;
   font-style: normal;
@@ -184,7 +184,7 @@ body {
   align-self: stretch;
 }
 
-.info-button{
+.index-info-button{
   display: flex;
   font-family: 'Poppins';
   width: 144px;
@@ -197,7 +197,7 @@ body {
 }
 
 
-.team{
+.index-team{
   display: flex;
   padding: 140px 120px 140px 120px;
   flex-direction: column;
@@ -208,7 +208,7 @@ body {
   background: #F0F0F0;
 }
 
-.team-info{
+.index-team-info{
   display: flex;
 
   flex-direction: column;
@@ -216,7 +216,7 @@ body {
   flex-shrink: 0;
 }
 
-.team-title{
+.index-team-title{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,7 +225,7 @@ body {
   flex-shrink: 0;
 }
 
-.team-title>h1{
+.index-team-title>h1{
   color: #1C1C1C;
   text-align: center;
   font-size: 60px;
@@ -236,7 +236,7 @@ body {
   align-self: stretch;
 }
 
-.team-title>p{
+.index-team-title>p{
   color: #1C1C1C;
   text-align: center;
   font-size: 20px;
@@ -246,7 +246,7 @@ body {
   align-self: stretch; /* 150% */
 }
 
-.team-image-frame{
+.index-team-image-frame{
   display: flex;
 
   justify-content: center;
@@ -254,7 +254,7 @@ body {
   flex-shrink: 0;
 }
 
-.team-image-left{
+.index-team-image-left{
   display: flex;
   margin-top: 60px;
   padding-left: 1px;
@@ -403,7 +403,7 @@ body {
   flex-shrink: 0;
 }
 
-.form-input{
+.contact-form-input{
   width: 378px;
   height: 63px;
   flex-shrink: 0;
@@ -425,7 +425,7 @@ body {
   text-align: left;
   padding: 20px;
 }
-#bg-input{
+#contact-bg-input{
   width: 156px;
   height: 53px;
   flex-shrink: 0;
