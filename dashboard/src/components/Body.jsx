@@ -47,38 +47,35 @@ function Body() {
                                 <br/>
                                 <div className='predict-price-input-boxes'>
                                     <div className='predict-price-input-boxes-cover'>
-                                        <div className='predict-price-input-box-lkr-1'>
-                                            <div className='predict-price-input-box-lkr-2'>
-                                                <span className='predict-price-input-box-lkr-val-span'>
-                                                    120.00
-                                                </span>
-                                                <span className='predict-price-input-box-lkr-currency-span'>
-                                                    LKR
-                                                </span>
-                                            </div>
-                                        </div>
+                                        <div className='predict-price-input-box-lkr-1'/>
+                                        <div className='predict-price-input-box-lkr-2'>
+                                            <span className='predict-price-input-box-lkr-val-span'>
+                                                120.00
+                                            </span>
+                                            <span className='predict-price-input-box-lkr-currency-span'>
+                                                LKR
+                                            </span>
+                                        </div>                                
                                         <div className='predict-price-input-box-days'>
-                                            <div className='predict-price-input-box-days-cover'>
-                                                <div className='predict-price-input-box-days-minus'>
-                                                    <p>-</p>
-                                                </div>
-                                                <div className='predict-price-input-box-days-plus'>
-                                                    <p>3</p>
-                                                </div>
-                                                <div className='predict-price-input-box-days-plus'>
-                                                    <p>+</p>
-                                                </div>
+                                            <div className='predict-price-input-box-days-cover'/>
+                                            <div className='predict-price-input-box-days-minus'>
+                                                <button href="#">-</button>
+                                            </div>
+                                            <div className='predict-price-input-box-days-plus'>
+                                                3
+                                            </div>
+                                            <div className='predict-price-input-box-days-plus'>
+                                            <button href="#">+</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <br/>
                                 <div className='predict-price-button'>
                                     <div className='predict-price-button-cover'>
                                         <div className='predict-price-button-top'/>
                                         <div className='predict-price-button-text'>
-                                            Predict
+                                            <button href="#">Predict</button>
                                         </div>
                                     </div>
                                     <div className='predict-price-value'>
@@ -237,7 +234,7 @@ function Body() {
 
                         <div className='download-results'>
                             <div className='download-results-text'>
-                                <p>Download Results Now</p>
+                                <button href="#" className='download-button'>Download Results Now</button>
                             </div>
                         </div>
                     </div>

@@ -265,16 +265,13 @@ body {
   justify-content: center; 
   align-content: space-between;
   gap: 15px; 
-  display: flex;
+  display: inline-flex;
 }
 
 .predict-price-input-boxes-cover{
   width: 240px; 
   height: 54px; 
   position: relative;
-  display: flex;
-  align-content: space-between;
-  justify-content: center;
 }
 
 .predict-price-input-box-lkr-1{
@@ -999,6 +996,10 @@ body {
   text-decoration: underline;
   text-transform: capitalize;
   word-wrap: break-word;
+}
+
+.download-button{
+  text-decoration: underline;
 }
 
 
