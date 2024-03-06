@@ -83,7 +83,7 @@ function Body() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
 
                     <div className='sales-small-table'>
