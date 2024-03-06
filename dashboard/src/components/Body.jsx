@@ -28,64 +28,40 @@ function Body() {
                                 </div>
                             </div>
                         </div>
+                        
+                        <div className='dashboard-price-predict'>
+                            <div className='dashboard-price-predict-title'>
+                                <p>Predict The Price of A Product (LKR)</p>
+                            </div>
 
-                        <div className='price-predict'>
-                            <div className='price-predict-heading'>
-                                <div className='price-predict-heading-text'>
-                                    Predict The Price Of A Product (LKR)
+                            <form className='dashboard-form-input'>
+                                <div className='dashboard-form-input-title'>
+                                    <label>Todays Price</label>
+                                    <label>No of Days</label>
+                                    
                                 </div>
-                            </div>
-                            <div className='predict-price-inputs'>
-                                <div className='predict-price-inputs-header'>
-                                    <div className='today-price-header'>
-                                        Today's Price
+                                <div className='dashboard-form-input-frame'>
+                                    <div className='dashboard-form-input-frame-price'>
+                                        <input type='text' className="dashboard-form-input-frame-price-input"
+                                        placeholder='120.00'/>
                                     </div>
-                                    <div className='no-of-days-price-header'>
-                                        No Of Days
-                                    </div>
-                                </div>
-                                <br/>
-                                <div className='predict-price-input-boxes'>
-                                    <div className='predict-price-input-boxes-cover'>
-                                        <div className='predict-price-input-box-lkr-1'/>
-                                        <div className='predict-price-input-box-lkr-2'>
-                                            <span className='predict-price-input-box-lkr-val-span'>
-                                                120.00
-                                            </span>
-                                            <span className='predict-price-input-box-lkr-currency-span'>
-                                                LKR
-                                            </span>
-                                        </div>                                
-                                        <div className='predict-price-input-box-days'>
-                                            <div className='predict-price-input-box-days-cover'/>
-                                            <div className='predict-price-input-box-days-minus'>
-                                                <button href="#">-</button>
-                                            </div>
-                                            <div className='predict-price-input-box-days-plus'>
-                                                3
-                                            </div>
-                                            <div className='predict-price-input-box-days-plus'>
-                                            <button href="#">+</button>
-                                            </div>
-                                        </div>
+                                    <div className='dashboard-form-input-frame-days'>
+                                    <input type='text' className="dashboard-form-input-frame-days-input"
+                                        placeholder='3'/>
                                     </div>
                                 </div>
-                                <br/>
-                                <div className='predict-price-button'>
-                                    <div className='predict-price-button-cover'>
-                                        <div className='predict-price-button-top'/>
-                                        <div className='predict-price-button-text'>
-                                            <button href="#">Predict</button>
-                                        </div>
-                                    </div>
-                                    <div className='predict-price-value'>
-                                        124.34
-                                    </div>
+                                <div className='dashboard-form-input-frame-footer'>
+                                   <input type='submit' value='Predict' className='dashboard-form-input-frame-footer-submit'id="buttong-bg"/> 
+                                   <label className='dashboard-form-input-frame-footer-value'>124.34</label>
                                 </div>
-                            </div>
-                        </div> 
+
+
+                            </form>
+
+                        </div>
+
                     </div>
-
+                
                     <div className='sales-small-table'>
                         <div className='units-small'>
                             <div className='units-small-title-cover'>

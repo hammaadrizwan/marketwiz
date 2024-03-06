@@ -59,7 +59,14 @@ body {
 }
 
 .body{
-  background: radial-gradient(54.5% 54.17% at 51.49% 44.83%, rgba(122, 210, 110, 0.38) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(111.35% 91.29% at -9.29% 16.39%, rgba(141, 211, 179, 0.34) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(229deg, rgba(218, 229, 124, 0.39) -20.55%, rgba(156, 163, 96, 0.39) -20.55%, rgba(40, 41, 43, 0.39) 42.75%), #28292B;
+  display: flex;
+height: 1333px;
+padding: 34px 120px 62px 122px;
+flex-direction: column;
+align-items: center;
+gap: 55px;
+align-self: stretch;
+  background: radial-gradient(60.43% 34.02% at 66.88% 70.46%, rgba(176, 54, 54, 0.34) 0%, rgba(255, 153, 0, 0.31) 0%, rgba(198, 255, 177, 0.26) 0.01%, rgba(213, 255, 144, 0.34) 0.02%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(59.07% 59.65% at 27.25% 44.86%, rgba(161, 214, 200, 0.52) 0%, rgba(0, 0, 0, 0.00) 100%), #28292B;
 }
 
 
@@ -176,9 +183,191 @@ body {
   word-wrap: break-word;
 }
 
+/*Hammaads Css for Praveens part*/
+.dashboard-price-predict{
+  display: flex;
+  width: 449px;
+  height: 367px;
+  padding: 18px 20px 29px 22px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  background: #232323;
+}
+.dashboard-price-predict-title{
+  display: flex;
+  width: 429px;
+  height: 102px;
+  padding: 9px 0px 0px 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 29px;
+  flex-shrink: 0;
+}
+.dashboard-price-predict-title>p{
+  color: #FFF;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  width: 321px;
+}
 
+.dashboard-form-input{
+  margin-top: 60px;
+  display: flex;
+  width: 398px;
+  height: 114px;
+  padding: 0px 4px 0px 1px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 50px;
+}
+.dashboard-form-input-title{
+  display: flex;
+width: 386px;
+height: 28px;
+justify-content: center;
+align-items: center;
+gap: 101px;
+flex-shrink: 0;
+border-radius: 50px;
+}
 
-/* Predicting the price section */
+.dashboard-form-input-title>label{
+  display: flex;
+  width: 124px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ADADAD;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.dashboard-form-input-frame{
+  display: flex;
+  width: 386px;
+  height: 74px;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  justify-content: space-between;
+}
+
+.dashboard-form-input-frame-price{
+  margin-left: 10px;
+  width: 195px;
+height: 54px;
+flex-shrink: 0;
+border-radius: 15px;
+border: 1px solid #EAEAEA;
+}
+.dashboard-form-input-frame-price-input{
+  display: flex;
+  width: 192px;
+  height: 52px;
+  flex-direction: column;
+  text-align:right;
+  flex-shrink: 0;
+  color: #ADADAD;
+  background: #232323;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  border-radius: 15px;
+  padding-right: 20px;
+}
+
+.dashboard-form-input-frame-days{
+  margin-left: 10px;
+  width: 160px;
+height: 54px;
+flex-shrink: 0;
+border-radius: 15px;
+border: 1px solid #EAEAEA;
+}
+
+.dashboard-form-input-frame-days-input{
+  display: flex;
+  width: 158px;
+  height: 52px;
+  flex-direction: column;
+  text-align:right;
+  flex-shrink: 0;
+  color: #ADADAD;
+  background: #232323;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  border-radius: 15px;
+  padding-right: 20px;
+}
+
+.dashboard-form-input-frame-footer{
+  display: flex;
+  margin-top: 20px;
+  width: 383px;
+  height: 64px;
+  align-items: flex-end;
+  gap: 43px;
+  flex-shrink: 0;
+}
+
+.dashboard-form-input-frame-footer-submit{
+  width: 142.476px;
+height: 64px;
+border-radius: 15px;
+background: #FBFBFB;
+color: #000;
+font-family: Poppins;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+width: 99px;
+height: 27.042px;
+margin-left: 10px;
+}
+#buttong-bg{
+  border-radius: 15px;
+background: #FBFBFB;
+width: 142.476px;
+height: 64px;
+}
+.dashboard-form-input-frame-footer-value{
+  color: #FFF;
+font-family: Poppins;
+font-size: 60px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+display: flex;
+width: 196px;
+height: 64px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+}
+/* Predicting the price section 
 .price-predict{
   width: 449px; 
   height: 367px; 
@@ -420,7 +609,7 @@ body {
   word-wrap: break-word;
 }
 
-
+*/
 
 
 
