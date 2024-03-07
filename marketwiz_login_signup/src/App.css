@@ -14,16 +14,7 @@ body {
   background: #121212;
   position: relative;
 }
-body::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background: #FFF;
-  clip-path: polygon(86% 0, 100% 0, 100% 100%, 60% 100%);
-}
+
 .container {
   z-index: 12;
   max-width: 1050px;
@@ -140,7 +131,7 @@ body::before {
   top: -10px;
   color: #28292B;
   font-size: 14px;
-  background: #fff;
+  background: #ffffff;
 }
 .content .input-box input[type="submit"] {
   color: #fff;

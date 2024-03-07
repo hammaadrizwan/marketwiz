@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import singup from './assets/SignUp.png'
+import './singup.css'
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -19,24 +20,26 @@ const Signup = () => {
     };
 
     return (
-            <div className="wrapper">
-                <div className="inner"></div>
-                    <div className="image-holder">
-                        <img src={singup} alt="" />
-                    </div>
-                <form action="">
-                    <h3>Login Form</h3>
-                    
-                    <div className="form-wrapper">
-                        <input type="text" placeholder="Username" className="form-control" />
+        <div className="wrapper" style={{ border: '1px solid white', borderRadius: '21px', width: 'fit-content', margin: '0 auto' }}>
+            <div className="inner"></div>
+            <div className="image-holder" style={{ float: 'left' }}>
+                <img src={singup} alt="" style={{ width: '600px', borderRadius: '31px' }} />
+            </div>
+            <form action="" style={{ marginLeft: 'auto', marginRight: 0, float: 'right' }}>
+                <h2><center>Login Form</center></h2>
+                <div className="form-row" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div className="form-wrapper" style={{ textAlign: 'right', marginLeft: '20px' }}>
+                        <input type="text" placeholder="Name" className="form-control" style={{ width: '250px' }} />
                         <i className="zmdi zmdi-account"></i>
                     </div>
-                    <div className="form-wrapper">
-                        <input type="text" placeholder="Email Address" className="form-control" />
+                    <div className="form-wrapper" style={{ textAlign: 'right', marginLeft: '20px' }}>
+                        <input type="text" placeholder="Telphone No" className="form-control" style={{ width: '250px' }} />
                         <i className="zmdi zmdi-email"></i>
                     </div>
-                    <div className="form-wrapper">
-                        <select name="" id="" className="form-control">
+                </div>
+                <div className="form-row" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div className="form-wrapper" style={{ textAlign: 'right', marginLeft: '20px' }}>
+                        <select name="" id="" className="form-control" style={{ width: '250px' }}>
                             <option value="" disabled selected>Choose your store</option>
                             <option value="male">c1</option>
                             <option value="femal">c2</option>
@@ -44,8 +47,8 @@ const Signup = () => {
                         </select>
                         <i className="zmdi zmdi-caret-down" style={{ fontSize: '17px' }}></i>
                     </div>
-                    <div className="form-wrapper">
-                        <select name="" id="" className="form-control">
+                    <div className="form-wrapper" style={{ textAlign: 'right', marginLeft: '20px' }}>
+                        <select name="" id="" className="form-control" style={{ width: '250px' }}>
                             <option value="" disabled selected>Choose your Branch</option>
                             <option value="COL 1">Male</option>
                             <option value="Gampha">Female</option>
@@ -53,20 +56,22 @@ const Signup = () => {
                         </select>
                         <i className="zmdi zmdi-caret-down" style={{ fontSize: '17px' }}></i>
                     </div>
-                    <div className="form-wrapper">
-                        <input type="password" placeholder="Email" className="form-control" />
+                </div>
+                <div className="form-row" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div className="form-wrapper" style={{ textAlign: 'right', marginLeft: '20px' }}>
+                        <input type="password" placeholder="Email" className="form-control" style={{ width: '250px' }} />
                         <i className="zmdi zmdi-lock"></i>
                     </div>
-                    <div className="form-wrapper">
-                        <input type="password" placeholder="Confirm Password" className="form-control" />
+                    <div className="form-wrapper" style={{ textAlign: 'right', marginLeft: '20px' }}>
+                        <input type="password" placeholder="Enter your Password" className="form-control" style={{ width: '250px' }} />
                         <i className="zmdi zmdi-lock"></i>
                     </div>
-                    <button>Register
-                        <i className="zmdi zmdi-arrow-right"></i>
-                    </button>
-                </form>
-            </div>
-        
+                </div>
+                <button style={{ marginLeft: 'auto', marginRight: 'auto', display: 'block' }}>Register
+                    <i className="zmdi zmdi-arrow-right"></i>
+                </button>
+            </form>
+        </div>
     );
 };
 
