@@ -793,6 +793,7 @@ flex-shrink: 0;
   align-items: flex-start;
   gap: 10px;
   flex-shrink: 0;
+  margin-left: -10px;
 
   }
   

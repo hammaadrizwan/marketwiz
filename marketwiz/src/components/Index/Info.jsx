@@ -16,7 +16,7 @@ function Info() {
                             Predict sales using weather with accuracy and enhance stock management now!
                             </h2>
                         </div>
-                        <a  href="#" className='index-info-button font-semibold hover:text-white hover:bg-black'>Get started</a>
+                        <a  href="/signup" className='index-info-button font-semibold hover:text-white hover:bg-black'>Get started</a>
                     </div>
                 </div>
                 <div className='hidden lg:flex index-info-right'>
