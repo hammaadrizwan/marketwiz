@@ -452,6 +452,131 @@ body {
   align-items: center;
 }
 
+/* LOGIN STYLE*/
+.login{
+  display: flex;
+  padding: 120px 120px 120px 122px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background: #28292B;
+}
+
+.login-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background: #28292B;
+}
+
+.login-right{
+  display: flex;
+  width: 515px;
+  height: 467px;
+  padding: 167px 24px 171px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: #F0F0F0;
+box-shadow: 13px 0px 12px 0px rgba(0, 0, 0, 0.19);
+border-radius: 42px;
+}
+
+.login-right-info{
+  display: flex;
+  width: 403px;
+  padding-top: 29px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+}
+
+.login-right-info-title{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
+}
+
+.login-right-info-title>h1{
+  color: #121212;
+  text-align: center;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 130.5%; /* 58.725px */
+  letter-spacing: -0.45px; 
+  align-self: stretch;
+}
+
+.login-right-info-input{
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 17px;
+  align-self: center;
+}
+
+.login-right-info-input-field{
+  width: 390px;
+height: 63px;
+border-radius: 40px;
+background: #D9D9D9;
+display: flex;
+width: 314.683px;
+height: 63px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: rgba(9, 2, 2, 0.54);
+font-family: "Poppins";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 130.5%;
+padding-left: 20px;
+padding-right: 10px;
+}
+
+.login-right-info-input-submit{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+  padding-bottom: 10px;
+}
+
+.login-right-info-input-option{
+  color: #3D3D3D;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  justify-content: center;
+}
+
+.login-left{
+  display: flex;
+  padding: 14px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: -50px;
+  }
+
+  
+/* FOOTER STLYE*/
 .footer{
   display: flex;
   background: #28292B;
@@ -468,3 +593,4 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+

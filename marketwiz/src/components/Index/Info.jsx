@@ -19,7 +19,7 @@ function Info() {
                         <a  href="#" className='index-info-button font-semibold hover:text-white hover:bg-black'>Get started</a>
                     </div>
                 </div>
-                <div className='hidden xl:flex index-info-right'>
+                <div className='hidden lg:flex index-info-right'>
                     <img src={image} alt='' />
                 </div>
             </div>

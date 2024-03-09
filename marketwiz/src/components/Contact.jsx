@@ -26,7 +26,7 @@ function Contact() {
                 <p>Let's Grow your sales together</p>
             </div>
             <div className="contact-items">
-                <div className="hidden xl:flex contact-left">
+                <div className="hidden lg:flex contact-left">
                     <div className="contact-left-items">
                         <div className="contact-left-text">
                             <h1>Request a call from us soon</h1>
