@@ -19,8 +19,8 @@ function Login() {
               </input>
             </div>
             <div className='login-right-info-input-submit'>
-            <input id="contact-bg-input" type="submit" value="Login" className="contact-button hover:drop-shadow-2xl " />
-            <a href= "#" className='login-right-info-input-option'>
+            <input id="login-bg-input" type="submit" value="Login" className="contact-button hover:drop-shadow-2xl " />
+            <a href="/signup" className='login-right-info-input-option'>
             Create your account now
             </a>
             </div>
