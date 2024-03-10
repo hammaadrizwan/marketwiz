@@ -120,12 +120,23 @@ def initialiseValuesToDataset(date, rainfall, dataset):
 
 def main():
     file_path = 'SalesPredictions.csv'
+    economic_path='EconomicPredictionsGBP.csv'
+    if os.path.exists("downloads"):
+        shutil.rmtree("downloads")
+        
     if os.path.exists(file_path):
         # Remove the file
         os.remove(file_path)
         print(f"{file_path} has been successfully removed.")
     else:
         print(f"The file {file_path} does not exist.")
+
+    if os.path.exists(economic_path):
+        # Remove the file
+        os.remove(economic_path)
+        print(f"{economic_path} has been successfully removed.")
+    else:
+        print(f"The file {economic_path} does not exist.")
     # Constants
     bucket_name = 'marketwiz-s3-mumbai'
     object_key = 'weather-bucket/colombo-model/weatherModel.pkl'
@@ -209,7 +220,24 @@ def main():
     results["Units Sold"] = np.abs(predicted_units_sold.astype(int))
     results = results[["Product Name", "Units Sold"]]
     print("Prediciton Complete")
-    results.to_csv("SalesPredictions.csv",index=False)
+    results.to_csv(file_path,index=False)
+
+    local_file_economicModel = download_file_from_s3(bucket_name, 'economic-bucket/gbp-srilanka-model/gbpSLModel.pkl', local_directory)
+
+    print("Economic model file downloaded")
+
+    order = (1, 0, 1)
+    economicModel = pickle.load(open(local_file_economicModel, 'rb'))
+
+    forecast_steps = 31
+    forecast = economicModel.get_forecast(steps=forecast_steps)
+    forecast_values = forecast.predicted_mean
+    
+    gbpPredictions = []
+    for i in range(forecast_steps): 
+        gbpPredictions.append(forecast_values.iloc[i])
+    pd.DataFrame(gbpPredictions).to_csv(economic_path,index=False)
+    print("Economic Prediciton Complete")
     shutil.rmtree("downloads")
 
 
