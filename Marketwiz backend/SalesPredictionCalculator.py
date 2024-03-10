@@ -119,21 +119,11 @@ def initialiseValuesToDataset(date, rainfall, dataset):
 
 
 def main():
-
-    # Specify the path of the file you want to remove
     file_path = 'SalesPredictions.csv'
-    economic_predictions_path = 'SalesPredictions.csv'
-    # Check if the file exists before attempting to remove it
     if os.path.exists(file_path):
         # Remove the file
         os.remove(file_path)
         print(f"{file_path} has been successfully removed.")
-    else:
-        print(f"The file {file_path} does not exist.")
-    if os.path.exists(economic_predictions_path):
-        # Remove the file
-        os.remove(economic_predictions_path)
-        print(f"{economic_predictions_path} has been successfully removed.")
     else:
         print(f"The file {file_path} does not exist.")
     # Constants
@@ -169,7 +159,7 @@ def main():
     
     # Download the file from S3
     local_file_salesEncoder_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/encoder.joblib', local_directory)
-    print("Predictions file downloaded")
+    print("Encoder file downloaded")
 
     local_file_salesPredictonTemplate_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/Predictions.csv', local_directory)
     print("Predictions file downloaded")
@@ -180,31 +170,16 @@ def main():
     local_file_salesScaler_path = download_file_from_s3(bucket_name, 'sales-bucket/udayagiri-colombo-srilanka-model/scaler.joblib', local_directory)
     print("Scaler file downloaded")
 
-    local_file_economicModel = download_file_from_s3(bucket_name, 'economic-bucket/gbp-srilanka-model/gbpSLModel.pkl', local_directory)
-
-    print("Economic model file downloaded")
-
-    order = (1, 0, 1)
-    economicModel = pickle.load(open(local_file_economicModel, 'rb'))
-
-    forecast_steps = 31
-    forecast = economicModel.get_forecast(steps=forecast_steps)
-    forecast_values = forecast.predicted_mean
-    
-    gbpPredictions = []
-    for i in range(forecast_steps): 
-        gbpPredictions.append(forecast_values.iloc[i])
-    pd.DataFrame(gbpPredictions).to_csv("gbpPredictions.csv",index=False)
-
-
     date=current_date
     rainfall=float(f"{rainfall[0]:.2f}")
     new_record = pd.read_csv(local_file_salesPredictonTemplate_path)
     new_record=initialiseValuesToDataset(date,rainfall,new_record)
     results=new_record
     print("Unpacking sales model files")
+
+    encoder = joblib.load(local_file_salesEncoder_path)# Load the scaler
     scaler = joblib.load(local_file_salesScaler_path)# Load the scaler
-    encoder = joblib.load(local_file_salesEncoder_path)# Load the encoder
+
     model = pickle.load(open(local_file_salesModel_path, 'rb'))# Load the model
 
     columns_to_drop = ["Product Name", "Units Sold"]#not needed for prediction
@@ -240,3 +215,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    
+    # Constants
