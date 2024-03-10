@@ -7,6 +7,7 @@ import Index from './components/Index'
 import Login from './components/Login'
 import Contact from './components/Contact'
 import SignUp from './components/SignUp'
+import Dashboard from './components/Dashboard'
 
 /* Add the navbar hero team contacts and footer here */
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
     </>
