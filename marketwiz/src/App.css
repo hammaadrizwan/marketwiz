@@ -815,3 +815,23 @@ flex-shrink: 0;
   line-height: normal;
 }
 
+/*Error style*/
+.error{
+  font-family: Poppins;
+  color: red;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 5px;
+}
+
+.forgot-password{
+  font-family: Poppins;
+  color: red;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 5px;
+}
