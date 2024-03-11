@@ -7,7 +7,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from '../firebase/config.js';
 
 function Login() {
-  const [loginType, setLoginType] = useState('login');
+  const [loginType, setLokginType] = useState('login');
   const [loginSuccess, setLoginSuccess] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [error, setError] = useState('');
@@ -89,7 +89,9 @@ function Login() {
                     <><input onClick={(e) => { handleLogin(e) }} id="login-bg-input" type="submit" value="Login" className="contact-button hover:drop-shadow-2xl " />
               <a href="/signup" className='login-right-info-input-option'>Create your account now</a></>
                     : 
-                    <a href="/dashboard" id="login-bg-input" className="contact-button hover:drop-shadow-2xl ">Dashboard</a>
+                    <div className='bg'>
+                    <a href="/dashboard" id="dashboard-login-bg-input" className="contact-button-dashboard hover:drop-shadow-2xl">Dashboard</a></div>
+
                   }
               
             </div>

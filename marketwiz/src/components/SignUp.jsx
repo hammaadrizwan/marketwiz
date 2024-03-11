@@ -5,6 +5,8 @@ import { auth } from '../firebase/config.js';
 import { doc, setDoc } from "firebase/firestore";
 import { collection } from "firebase/firestore";
 import { db } from '../firebase/config.js';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function SignUp() {
   const [error, setError] = useState('');
@@ -17,7 +19,10 @@ function SignUp() {
 
   function handleSignup(e) {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, userCredentials.email, userCredentials.password)
+    if (userCredentials.name === "" || userCredentials.telephone === "" || userCredentials.store === "" || userCredentials.branch === "" || userCredentials.email === "" || userCredentials.password === "") {
+      setError("All fields are required");
+    }else{
+      createUserWithEmailAndPassword(auth, userCredentials.email, userCredentials.password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
@@ -58,9 +63,13 @@ function SignUp() {
           setError(error.message);
         }
       });
+    }
+    
   }
 
   return (
+    <div>
+      <Navbar />
     <section className='signup'>
       <div className='signup-items'>
         <div className='signup-items-left'>
@@ -75,11 +84,11 @@ function SignUp() {
               </div>
               <div className='signup-items-left-info-input-frame-two'>
                 <select name="store" className='drop-shadow-md signup-left-info-input-store' onChange={(e) => { handleCredentials(e) }}>
-                  <option value="none" selected disabled hidden>Select store</option>
+                  <option value="none" selected >Select store</option>
                   <option value="Udayagiri">Udayagiri</option>
                 </select>
                 <select name="branch" className='drop-shadow-md signup-left-info-input-branch' onChange={(e) => { handleCredentials(e) }}>
-                  <option value="none" selected disabled hidden>Select branch</option>
+                  <option value="none" selected >Select branch</option>
                   <option value="Maradana">Dematagoda</option>
                 </select>
               </div>
@@ -100,6 +109,8 @@ function SignUp() {
         </div>
       </div>
     </section>
+    <Footer />
+    </div>
   );
 }
 

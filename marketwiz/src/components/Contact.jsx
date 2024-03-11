@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
+import Navbar from "./Navbar";
+const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+import Footer from "./Footer";
 
 function Contact() {
     const form = useRef();
@@ -20,6 +23,8 @@ function Contact() {
     }
 
     return (
+        <div>
+        <Navbar />
         <section className="contact h-full">
             <div className="contact-title">
                 <h1>Contact Us</h1>
@@ -45,6 +50,9 @@ function Contact() {
                 </div>
             </div>
         </section>
+        <Footer />
+        </div>
+        
     )
 }
 

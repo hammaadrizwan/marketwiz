@@ -451,7 +451,44 @@ body {
   text-align: center;
   align-items: center;
 }
+.contact-button-dashboard{
+  border-radius: 28px;
+background: #28292B;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130.5%; /* 26.1px */
+  align-self: center;
+  text-align: center;
+  align-items: center;
+}
+#dashboard-login-bg-input{
+  display: flex;
+  width: 156px;
+  height: 53px;
+  flex-shrink: 0;
+  border-radius: 28px;
+  align-self: center;
+  background: linear-gradient(90deg, #E6EC6D 0%, #94D7BD 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+padding-left: 18px;
+}
+.bg{
+  width: 156px;
+  height: 53px;
+  border-radius: 28px;
+  width: 156px;
+  height: 53px;
+  flex-shrink: 0;
+  border-radius: 28px;
+  align-self: center;
+  background: #28292B;
 
+}
 /* LOGIN STYLE*/
 .login{
   display: flex;
@@ -796,6 +833,1138 @@ flex-shrink: 0;
   margin-left: -10px;
 
   }
+  /* DASHBOARD STYLE*/
+  .dashboard{
+    display: flex;
+  height: 1333px;
+  padding: 34px 120px 62px 122px;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px;
+  align-self: stretch;
+    background: radial-gradient(60.43% 34.02% at 66.88% 70.46%, rgba(176, 54, 54, 0.34) 0%, rgba(255, 153, 0, 0.31) 0%, rgba(198, 255, 177, 0.26) 0.01%, rgba(213, 255, 144, 0.34) 0.02%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(59.07% 59.65% at 27.25% 44.86%, rgba(161, 214, 200, 0.52) 0%, rgba(0, 0, 0, 0.00) 100%), #28292B;
+  }
+  
+  .greeting{
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+  }
+  
+  /* All the predictions section */
+  .predictions-card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .predictions-card{
+    display: flex;
+    width: 959px;
+    height: 513px;
+    align-items: flex-start;
+    gap: 22px;
+    flex-shrink: 0;
+  }
+  
+  /* Weather and economy merged sections */
+  .weather-economic-pred-card{
+    width: 448px; 
+    height: 513px; 
+    padding-top: 10px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 25px; 
+    display: inline-flex;
+  }
+  
+  
+  /* Rainfall card section */
+  .rainfall-pred{
+    width: 448px; 
+    height: 111px; 
+    position: relative;
+    background-image: url("../src/assets/images/Rainfall.svg");
+    background-size: cover;
+    border-radius: 37px;
+  }
+  
+  .rainfall-bg{
+    width: 448px; 
+    height: 111px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.28) 0%, rgba(221.85, 225.25, 55.37, 0) 100%); 
+    border-radius: 37px;
+  }
+  
+  .rainfall-text-cover{
+    width: 393px; 
+    height: 73px; 
+    left: 28.50px; 
+    top: 11px; 
+    position: absolute;
+  }
+  
+  .rainfall-val{
+    width: 123px; 
+    height: 62px; 
+    left: 271px; 
+    top: 11px; 
+    position: absolute; 
+    color: black; 
+    font-size: 60px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .rainfall-text{
+    width: 253.77px; 
+    height: 36.18px; 
+    left: 4.94px; 
+    top: 11.43px; 
+    position: absolute;
+  }
+  
+  .rainfall-text-span{
+    color: #181818; 
+    font-size: 25px;  
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .rainfall-measurement-span{
+    color: #181818; 
+    font-size: 25px; 
+    font-weight: 700; 
+    text-transform: lowercase; 
+    word-wrap: break-word;
+  }
+  
+  .rainfall-extra-span{
+    color: #181818; 
+    font-size: 25px;  
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  /*Hammaads Css for Praveens part*/
+  .dashboard-price-predict{
+    display: flex;
+    width: 449px;
+    height: 367px;
+    padding: 18px 20px 29px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #232323;
+  }
+  .dashboard-price-predict-title{
+    display: flex;
+    width: 429px;
+    height: 102px;
+    padding: 9px 0px 0px 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+    flex-shrink: 0;
+  }
+  .dashboard-price-predict-title>p{
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 321px;
+  }
+  
+  .dashboard-form-input{
+    margin-top: 60px;
+    display: flex;
+    width: 398px;
+    height: 114px;
+    padding: 0px 4px 0px 1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+  }
+  .dashboard-form-input-title{
+    display: flex;
+  width: 386px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 101px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  }
+  
+  .dashboard-form-input-title>label{
+    display: flex;
+    width: 124px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ADADAD;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .dashboard-form-input-frame{
+    display: flex;
+    width: 386px;
+    height: 74px;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    justify-content: space-between;
+  }
+  
+  .dashboard-form-input-frame-price{
+    margin-left: 10px;
+    width: 195px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #EAEAEA;
+  }
+  .dashboard-form-input-frame-price-input{
+    display: flex;
+    width: 192px;
+    height: 52px;
+    flex-direction: column;
+    text-align:right;
+    flex-shrink: 0;
+    color: #ADADAD;
+    background: #232323;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 15px;
+    padding-right: 20px;
+  }
+  
+  .dashboard-form-input-frame-days{
+    margin-left: 10px;
+    width: 160px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #EAEAEA;
+  }
+  
+  .dashboard-form-input-frame-days-input{
+    display: flex;
+    width: 158px;
+    height: 52px;
+    flex-direction: column;
+    text-align:right;
+    flex-shrink: 0;
+    color: #ADADAD;
+    background: #232323;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 15px;
+    padding-right: 20px;
+  }
+  
+  .dashboard-form-input-frame-footer{
+    display: flex;
+    margin-top: 20px;
+    width: 383px;
+    height: 64px;
+    align-items: flex-end;
+    gap: 43px;
+    flex-shrink: 0;
+  }
+  
+  .dashboard-form-input-frame-footer-submit{
+    width: 142.476px;
+  height: 64px;
+  border-radius: 15px;
+  background: #FBFBFB;
+  color: #000;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  width: 99px;
+  height: 27.042px;
+  margin-left: 10px;
+  }
+  #buttong-bg{
+    border-radius: 15px;
+  background: #FBFBFB;
+  width: 142.476px;
+  height: 64px;
+  }
+  .dashboard-form-input-frame-footer-value{
+    color: #FFF;
+  font-family: Poppins;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  display: flex;
+  width: 196px;
+  height: 64px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  }
+  /* Predicting the price section 
+  .price-predict{
+    width: 449px; 
+    height: 367px; 
+    padding-top: 18px; 
+    padding-bottom: 29px; 
+    padding-left: 32px; 
+    background: #232323; 
+    border-radius: 50px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 14px; 
+    display: inline-flex;
+  }
+  
+  .price-predict-heading{
+    width: 429px; 
+    height: 102px; 
+    padding-top: 9px; 
+    padding-left: 6px; 
+    border-radius: 50px; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 29px; 
+    display: inline-flex;
+  }
+  
+  .price-predict-heading-text{
+    width: 321px; 
+    color: white; 
+    font-size: 25px;  
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word
+  }
+  
+  .predict-price-inputs{
+    width: 398px; 
+    height: 114px; 
+    padding-left: 1px; 
+    padding-right: 4px; 
+    border-radius: 50px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    display: inline-flex;
+  }
+  
+  .predict-price-inputs-header{
+    width: 386px; 
+    height: 28px; 
+    border-radius: 50px; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 101px; 
+    display: inline-flex;
+  }
+  
+  .today-price-header{
+    width: 149px; 
+    height: 22px; 
+    color: #ADADAD; 
+    font-size: 20px;  
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .no-of-days-price-header{
+    width: 124px; 
+    height: 20px; 
+    color: #ADADAD; 
+    font-size: 20px; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .predict-price-input-boxes{
+    width: 386px; 
+    height: 74px; 
+    border-radius: 50px; 
+    justify-content: center; 
+    align-content: space-between;
+    gap: 15px; 
+    display: inline-flex;
+  }
+  
+  .predict-price-input-boxes-cover{
+    width: 240px; 
+    height: 54px; 
+    position: relative;
+  }
+  
+  .predict-price-input-box-lkr-1{
+    width: 240px; 
+    height: 53.16px; 
+    left: 0px; 
+    top: 0.84px; 
+    position: absolute; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02) inset; 
+    border-radius: 15px; 
+    border: 1px #EAEAEA solid;
+  }
+  
+  .predict-price-input-box-lkr-2{
+    width: 183.26px; 
+    height: 36.28px; 
+    left: 94px; 
+    top: 9.28px; 
+    position: absolute;
+  }
+  
+  .predict-price-input-box-lkr-val-span{
+    color: #ADADAD; 
+    font-size: 25px; 
+    font-family: Poppins; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .predict-price-input-box-lkr-currency-span{
+    color: #ADADAD; 
+    font-size: 25px; 
+    font-family: Poppins; 
+    font-weight: 500; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .predict-price-input-box-days{
+    width: 130px; 
+    height: 53px; 
+    position: relative;
+    align-content: space-between;
+    justify-content: center;
+  }
+  
+  .predict-price-input-box-days-cover{
+    width: 126.32px; 
+    height: 53px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    border-radius: 12px; 
+    border: 1px white solid;
+  }
+  
+  .predict-price-input-box-days-minus{
+    width: 31.89px; 
+    height: 23.94px; 
+    left: 11.04px; 
+    top: 13.68px; 
+    position: absolute; 
+    color: #ADADAD; 
+    font-size: 25px; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .predict-price-input-box-days-val{
+    width: 31.89px; 
+    height: 23.94px; 
+    left: 96.89px; 
+    top: 14.53px; 
+    position: absolute; 
+    color: #ADADAD; 
+    font-size: 25px; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .predict-price-input-box-days-plus{
+    width: 31.89px; 
+    height: 23.94px; 
+    left: 53.96px; 
+    top: 13.68px; 
+    position: absolute; 
+    color: #ADADAD; 
+    font-size: 25px; 
+    font-family: Poppins; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .predict-price-button{
+    width: 383px; 
+    height: 64px; 
+    border-radius: 50px; 
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    gap: 43px; 
+    display: inline-flex;
+  }
+  
+  .predict-price-button-cover{
+    width: 144px; 
+    height: 64px; 
+    position: relative;
+  }
+  
+  .predict-price-button-top{
+    width: 142.48px; 
+    height: 64px; 
+    left: 0.38px; 
+    top: 0px; 
+    position: absolute; 
+    background: #FBFBFB; 
+    border-radius: 15px;
+  }
+  
+  .predict-price-button-text{
+    width: 99px; 
+    height: 27.04px; 
+    left: 26.50px; 
+    top: 13.52px; 
+    position: absolute; 
+    color: black; 
+    font-size: 25px; 
+    font-family: Poppins; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .predict-price-value{
+    width: 196px; 
+    height: 64px; 
+    color: white; 
+    font-size: 60px; 
+    font-family: Poppins; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  */
+  
+  
+  
+  
+  
+  /* Sales Prediction small table */
+  .sales-small-table{
+    width: 489px; 
+    height: 513px; 
+    padding-top: 10px; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 23px; 
+    display: inline-flex;
+  }
+  
+  .units-small{
+    width: 478px; 
+    height: 503px; 
+    background: linear-gradient(180deg, #F6FE98 0%, #9FD5C9 100%); 
+    box-shadow: 13px 0px 12px rgba(0, 0, 0, 0.19); 
+    border-radius: 43px; 
+    overflow: hidden; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    display: inline-flex;
+  }
+  
+  .units-small-title-cover {
+    width:395px;
+    height:68px;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 10px; 
+    display: inline-flex;
+  }
+  
+  .units-small-title{
+    width: 339px; 
+    height: 68px; 
+    color: black; 
+    font-size: 25px; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .units-small-table{
+    width: 414px; 
+    height: 381px; 
+    padding-top: 24px; 
+    padding-bottom: 23px; 
+    border-radius: 43px; 
+    overflow: hidden; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 16px; 
+    display: flex;
+  }
+  
+  .small-table-first{
+    width: 413px; 
+    height: 106px; 
+    position: relative;
+  }
+  
+  .small-table-first-box{
+    width: 413px; 
+    height: 106px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    background: #FBFBFB; 
+    border-radius: 22px;
+  }
+  
+  .small-table-first-text{
+    width: 259.30px; 
+    height: 66.95px; 
+    left: 18.86px; 
+    top: 21.20px; 
+    position: absolute;
+  }
+  
+  .small-table-first-text-span{
+    color: #181818; 
+    font-size: 25px; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .small-table-first-val-span{
+    color: #181818; 
+    font-size: 25px; 
+    font-family:Product Sans; 
+    font-weight: 700; text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .small-table-first-quantity{
+    left: 328.14px; 
+    top: 16.74px; 
+    position: absolute; 
+    color: black; 
+    font-size: 56px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .small-table-second{
+    width: 413px; 
+    height: 100px; 
+    position: relative
+  }
+  
+  .small-table-second-box{
+    width: 413px; 
+    height: 100px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    background: #FBFBFB; 
+    border-radius: 22px;
+  }
+  
+  .small-table-second-text{
+    width: 216.29px; 
+    height: 63.16px; 
+    left: 21.44px; 
+    top: 18.95px; 
+    position: absolute;
+  }
+  
+  .small-table-second-text-span{
+    color: #181818; 
+    font-size: 22px;  
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .small-table-second-val-span{
+    color: #181818; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .small-table-second-quantity{
+    left: 330.03px; 
+    top: 24.21px; 
+    position: absolute; 
+    color: black; 
+    font-size: 56px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .small-table-third{
+    width: 414px; 
+    height: 101px; 
+    position: relative;
+  }
+  
+  .small-table-third-box{
+    width: 414px; 
+    height: 101px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    background: #FBFBFB; 
+    border-radius: 22px;
+  }
+  
+  .small-table-third-text{
+    width: 244.85px; 
+    height: 63.79px; 
+    left: 21.49px; 
+    top: 22.33px; 
+    position: absolute;
+  }
+  
+  .small-table-third-text-span{
+    color: #181818; 
+    font-size: 25px;  
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .small-table-third-val-span{
+    color: #181818; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .small-table-third-quantity{
+    left: 347.65px; 
+    top: 13.82px; 
+    position: absolute; 
+    color: black; 
+    font-size: 56px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  
+  
+  
+  /* Large sales table */
+  .full-table-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .full-table{
+    width: 951px; 
+    height: 539px; 
+    background: rgba(51.15, 71.64, 112.62, 0); 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .units-full-title{
+    width: 596px;
+    height: 44px;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 800;
+    word-wrap: break-word;
+  }
+  
+  .full-table-sales{
+    width: 939px; 
+    height: 443px; 
+    position: relative;
+  }
+  
+  .full-tables-sales-cover{
+    width: 929.08px; 
+    height: 443px; 
+    left: 9.92px; 
+    top: 0px; 
+    position: absolute; 
+    background: #353535; 
+    border-radius: 53px;
+  }
+  
+  .first-product{
+    display:flex;
+    flex-direction: row;
+    width: 356.96px; 
+    height: 30.72px; 
+    left: 75.36px; 
+    top: 117.94px; 
+    position: absolute;
+  }
+  
+  .first-product>p{
+    margin-left:5px;
+  }
+  
+  .first-product-name-span{
+    color: white; 
+    font-size: 25px; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .first-product-val-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .second-product{
+    display:flex;
+    flex-direction: row;
+    width: 356.96px; 
+    height: 30.72px; 
+    left: 75.36px; 
+    top: 178.39px; 
+    position: absolute;
+  }
+  
+  .second-product>p{
+    margin-left:5px;
+  }
+  
+  .second-product-name-span{
+    color: white; 
+    font-size: 25px;
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .second-product-val-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .third-product{
+    display:flex;
+    flex-direction: row;
+    width: 356.96px; 
+    height: 30.72px; 
+    left: 75.36px; 
+    top: 242.81px; 
+    position: absolute;
+  }
+  
+  .third-product>p{
+    margin-left:5px;
+  }
+  
+  .third-product-name-span{
+    color: white; 
+    font-size: 25px; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .third-product-val-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .fourth-product{
+    display:flex;
+    flex-direction: row;
+    width: 356.96px; 
+    height: 30.72px; 
+    left: 75.36px; 
+    top: 306.23px; 
+    position: absolute;
+  }
+  
+  .fourth-product>p{
+    margin-left:5px;
+  }
+  
+  .fourth-product-name-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: CocoSharp Trial; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .fourth-product-val-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .fifth-product{
+    display:flex;
+    flex-direction: row;
+    width: 464.05px; 
+    height: 30.72px; 
+    left: 75.36px; 
+    top: 367.68px; 
+    position: absolute;
+  }
+  
+  .fifth-product>p{
+    margin-left:5px;
+  }
+  
+  .fifth-product-name-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: CocoSharp Trial; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .fifth-product-val-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .first-product-quantity{
+    width: 49.58px; 
+    height: 33.70px; 
+    left: 703.01px; 
+    top: 110.01px; 
+    position: absolute; 
+    text-align: center;
+     color: white; 
+     font-size: 29px; 
+     font-family: Product Sans; 
+     font-weight: 700; 
+     text-transform: capitalize; 
+     word-wrap: break-word;
+  }
+  
+  .second-product-quantity{
+    width: 49.58px; 
+    height: 33.70px; 
+    left: 704px; 
+    top: 176.41px; 
+    position: absolute; 
+    text-align: center; 
+    color: white; 
+    font-size: 29px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .third-product-quantity{
+    width: 49.58px; 
+    height: 33.70px; 
+    left: 704px; 
+    top: 239.83px; 
+    position: absolute; 
+    text-align: center; 
+    color: white; 
+    font-size: 29px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .fourth-product-quantity{
+    width: 49.58px; 
+    height: 33.70px; 
+    left: 703.01px; 
+    top: 298.31px; 
+    position: absolute; 
+    text-align: center; 
+    color: white; 
+    font-size: 29px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .fifth-product-quantity{
+    width: 49.58px; 
+    height: 33.70px; 
+    left: 703.01px; 
+    top: 368.67px; 
+    position: absolute; 
+    text-align: center; 
+    color: white; 
+    font-size: 29px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .full-sales-table-header{
+    width: 929.08px; 
+    height: 72.35px; 
+    left: 9.92px; 
+    top: 0px; 
+    position: absolute;
+  }
+  
+  .full-sales-table-header-cover-1{
+    width: 929.08px; 
+    height: 72.35px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    background: #E3E87C; 
+    border-radius: 71px;
+  }
+  
+  .full-sales-table-header-cover-2{
+    width: 929.08px; 
+    height: 35.27px; 
+    left: 0px; 
+    top: 37.08px; 
+    position: absolute; 
+    background: #E3E87C;
+  }
+  
+  .full-sales-table-left-header{
+    width: 338.12px; 
+    height: 26.76px; 
+    left: 0px; 
+    top: 25.77px; 
+    position: absolute; 
+    text-align: center; 
+    color: black; 
+    font-size: 29px; 
+    font-family: CocoSharp Trial; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .full-sales-table-right-header{
+    width: 247.89px; 
+    height: 26.76px; 
+    left: 603.86px; 
+    top: 26.76px; 
+    position: absolute; 
+    text-align: center; 
+    color: black; 
+    font-size: 29px; 
+    font-family: CocoSharp Trial; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  
+  
+  /* Download predictions section */
+  .download-results{
+    width:886px;
+    height:50px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+  }
+  
+  .download-results-text{
+    width: 210px;
+    height: 44px;
+    color:white;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: underline;
+    text-transform: capitalize;
+    word-wrap: break-word;
+  }
+  
+  .download-button{
+    text-decoration: underline;
+  }
+  
   
 /* FOOTER STLYE*/
 .footer{

@@ -13,7 +13,7 @@ import Dashboard from './components/Dashboard'
 function App() {
   return (
     <>
-      <Navbar />
+      
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/contact" element={<Contact />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-      <Footer />
+
     </>
   )
 }
