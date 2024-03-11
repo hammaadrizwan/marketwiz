@@ -2004,3 +2004,23 @@ flex-shrink: 0;
   line-height: normal;
   margin-top: 5px;
 }
+
+.error-404{
+  background: #28292B;
+  display: flex;
+  height: 550px;
+  padding: 209px 211px 143px 185px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-404-text{
+  background: #28292B;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 59px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

@@ -5,6 +5,7 @@ import { auth } from '../firebase/config.js';
 import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../firebase/config.js';
+import Navbar from './Navbar.jsx';
 
 function Login() {
   const [loginType, setLokginType] = useState('login');
@@ -70,6 +71,8 @@ function Login() {
   }
 
   return (
+    <>
+    <Navbar />
     <section className="login">
       <div className='xl:pt-28 xl:pb-32 login-items'>
         <div className='login-right'>
@@ -102,6 +105,7 @@ function Login() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

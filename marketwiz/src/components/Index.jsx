@@ -15,7 +15,6 @@ function Index() {
       <Hero />
       <Info />
       <Team />
-      <Footer />
     </>
   )
 }

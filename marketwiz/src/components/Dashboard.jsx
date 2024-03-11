@@ -6,7 +6,7 @@ function Dashboard() {
   const userDetails = JSON.parse(localStorage.getItem('userDetails'));
   if (!userDetails || !userDetails.name) {
     // Redirect to login page or display message
-    return (<><p>Please log in to access the Dashboard.</p><Footer /></>);
+    return (<div className='error-404'><p className='error-404-text'>404 Bad Request</p></div>);
   }
   return (
     <>
@@ -226,7 +226,6 @@ function Dashboard() {
         </div>
     </div>   
     </div>
-    <Footer />
     </>
   );
 }

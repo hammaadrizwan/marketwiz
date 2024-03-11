@@ -11,7 +11,7 @@ import Footer from './Footer';
 function SignUp() {
   const [error, setError] = useState('');
   const [userCredentials, setUserCredentials] = useState({});
-
+  const [signinSuccess, setSiginInSuccess] = useState('');
   function handleCredentials(e) {
     setError("");
     setUserCredentials({ ...userCredentials, [e.target.name]: e.target.value });
@@ -26,6 +26,7 @@ function SignUp() {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
+        setSiginInSuccess("Success");
 
         // Save additional user details to Firestore
         const userDetails = {
@@ -98,8 +99,16 @@ function SignUp() {
               </div>
               <div className='signup-items-left-info-input-frame-footer'>
                 {error && <div className="error">{error}</div>}
-                <input onClick={(e) => { handleSignup(e) }} id="signup-bg-input" type="submit" value="Sign Up" className="contact-button hover:drop-shadow-2xl " />
-                <a href="/login" className='login-right-info-input-option'>Already have an account? Login now</a>
+                {
+                    signinSuccess == '' ?
+                    <><input onClick={(e) => { handleSignup(e) }} id="signup-bg-input" type="submit" value="Sign Up" className="contact-button hover:drop-shadow-2xl " />
+                    <a href="/login" className='login-right-info-input-option'>Already have an account? Login now</a></>
+                    : 
+                    <><a href="/login" id="signup-bg-input" className="contact-button hover:drop-shadow-2xl ">Login Now</a>
+                    </>
+
+                  }
+                
               </div>
             </div>
           </form>
@@ -109,7 +118,6 @@ function SignUp() {
         </div>
       </div>
     </section>
-    <Footer />
     </div>
   );
 }
