@@ -1,13 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer'
 
 function Dashboard() {
-  const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-  if (!userDetails || !userDetails.name) {
-    // Redirect to login page or display message
-    return (<div className='error-404'><p className='error-404-text'>404 Bad Request</p></div>);
-  }
+    /*
+    const [rainfall, setRainfall] = useState([]);
+    const [T_Avg, setT_Avg] = useState(0); // State to hold T_Avg
+
+    useEffect(() => {
+        // Fetch rainfall data from API
+        fetch("/api/ml")
+            .then(res => res.json())
+            .then(data => {
+                setRainfall(data.weather_prediction_json); // Corrected to use capital "R" in "Rainfall"
+            })
+            .catch(error => console.error("Error fetching data:", error));
+    }, []);
+
+    // Add a useEffect to log the rainfall when it changes
+    useEffect(() => {
+        console.log("Rainfall:", rainfall);
+    }, [rainfall]);
+
+    const [data,setData] = useState([{}]);
+    useEffect(() => {
+        fetch("/members.json").then(
+            response => response.json()
+        ).then(
+            data => {
+                setData(data);
+                console.log(data)
+            }
+        )
+        },[])
+*/
+    const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+    if (!userDetails || !userDetails.name) {
+        // Redirect to login page or display message
+        return (<div className='error-404'><p className='error-404-text'>404 Bad Request</p></div>);
+    }
+
+    
+    
+
   return (
     <>
     <Navbar />
