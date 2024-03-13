@@ -12,13 +12,22 @@ import Dashboard from './components/Dashboard';
 /* Add the navbar hero team contacts and footer here */
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
+  const [data,setData] = useState([]);
 
   useEffect(() => {
-    fetch('/time')
+    fetch('/api/time')
       .then(res => res.json())
       .then(data => {
         setCurrentTime(data.time);
       });
+  }, []);
+
+  useEffect(() => {
+    fetch('/api/ml').then(res => res.json()).then(data => {
+      setData(data);
+      console.log(data);
+    }
+    );
   }, []);
 
   return (

@@ -11,13 +11,18 @@ import numpy as np
 import shutil
 import time
 
-app = Flask(__name__)
-@app.route('/time', methods=['GET'])
+app = Flask(__name__,static_folder="../dist",static_url_path="/")
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
+@app.route('/api/time')
 def get_current_time():
     return {'time': time.time()}
 
 
-@app.route('/ml')
+@app.route('/api/ml')
 def predict():
     # Download file from S3
     s3 = boto3.client('s3')
@@ -125,18 +130,30 @@ def predict():
     forecast_steps = 31
     forecast = economicModel.get_forecast(steps=forecast_steps)
     forecast_values = forecast.predicted_mean
-    gbpPredictions = [forecast_values.iloc[i] for i in range(forecast_steps)]
+    gbpPredictions = {i: forecast_values.iloc[i] for i in range(1, forecast_steps)}
 
     # Store predictions in JSON format
     temp["Units Sold"] = np.abs(predicted_units_sold.astype(int))
     results = temp[["Product Name", "Units Sold"]]
+    sales = []
+
+    for index, row in results.iterrows():
+        sales.append({"Product Name": row["Product Name"], "Units Sold": row["Units Sold"]})
+
     shutil.rmtree(local_directory)
     
-    sales_prediction_json = list(results.to_dict(orient='records'))
     T_Avg = float(f"{T_Avg:.2f}")
     rainfall = float(f"{rainfall[0]:.2f}")
     weather_prediction_json = {"T_Avg": T_Avg, "Rainfall": rainfall}
-    economic_prediction_json = {"GBP": gbpPredictions[1:]}
+
     
     
-    return jsonify(weather_prediction_json, sales_prediction_json, economic_prediction_json)  
+    return {
+        'args': {},  # Add your arguments if needed
+        'headers': {},  # Add your headers if needed
+        'url': {},  # Replace with the actual URL if needed
+        'weather': weather_prediction_json,  # Weather prediction data
+        'sales': sales,  # Sales prediction data
+        'economic': gbpPredictions  # Economic predictions
+    }
+

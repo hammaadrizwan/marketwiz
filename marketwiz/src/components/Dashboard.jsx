@@ -3,9 +3,15 @@ import Navbar from './Navbar';
 import Footer from './Footer'
 
 function Dashboard() {
-     // This effect runs only once when the component mounts
+    const [currentTime, setCurrentTime] = useState(0);
 
-    // Render loading indicator while waitin
+    useEffect(() => {
+      fetch('/api/time')
+        .then(res => res.json())
+        .then(data => {
+          setCurrentTime(data.time);
+        });
+    }, []);
 
     const userDetails = JSON.parse(localStorage.getItem('userDetails'));
     if (!userDetails || !userDetails.name) {
@@ -13,11 +19,9 @@ function Dashboard() {
         return (<div className='error-404'><p className='error-404-text'>404 Bad Request</p></div>);
     }
 
-    
-    
-
   return (
     <>
+    <div><p className='api'>{currentTime}</p></div>
     <Navbar />
     <div className="dashboard">
     <div className='greeting'>
