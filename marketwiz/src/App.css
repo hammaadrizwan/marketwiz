@@ -15,6 +15,10 @@ body {
   margin: 0;
   font-family: "CocoSharp Trial";
 }
+
+.api{
+  font-family: "Poppins";
+}
 .nav{
   display: flex;
   background: #28292B;

@@ -3,14 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "http://localhost:5000/members"
-  ,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "vite"
+    "start-api": "cd api && venv/bin/flask run --no-debugger"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -32,5 +30,7 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "vite": "^5.1.4"
-  }
+  },
+  "proxy": "http://localhost:5000"
+  
 }

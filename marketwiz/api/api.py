@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, make_response, jsonify
 import boto3
 import pickle
 import os
@@ -9,11 +9,15 @@ import joblib
 import requests
 import numpy as np
 import shutil
+import time
 
 app = Flask(__name__)
+@app.route('/time', methods=['GET'])
+def get_current_time():
+    return {'time': time.time()}
 
-@app.route('/api/ml', methods=['GET'])
 
+@app.route('/ml')
 def predict():
     # Download file from S3
     s3 = boto3.client('s3')
@@ -135,5 +139,4 @@ def predict():
     economic_prediction_json = {"GBP": gbpPredictions[1:]}
     
     
-    return jsonify(weather_prediction_json, sales_prediction_json, economic_prediction_json)
-
+    return jsonify(weather_prediction_json, sales_prediction_json, economic_prediction_json)  
