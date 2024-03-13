@@ -34,7 +34,7 @@ function App() {
     <>
       <div><p className='api'>{currentTime}</p></div>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route exact path="/" element={<Index />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
