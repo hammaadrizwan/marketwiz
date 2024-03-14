@@ -252,12 +252,6 @@ function Dashboard() {
                           Units Sold
                       </div>
                   </div>
-  
-                  <div className='download-results'>
-                      <div className='download-results-text'>
-                          <button href="#" className='download-button'>Download Results Now</button>
-                      </div>
-                  </div>
               </div>
           </div>
       </div>   
