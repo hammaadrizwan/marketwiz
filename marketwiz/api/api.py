@@ -142,8 +142,8 @@ def predict():
 
     shutil.rmtree(local_directory)
     
-    T_Avg = float(f"{T_Avg:.2f}")
-    rainfall = float(f"{rainfall[0]:.2f}")
+    T_Avg = float(f"{T_Avg:.1f}")
+    rainfall = float(f"{rainfall[0]:.1f}")
     weather_prediction_json = {"T_Avg": T_Avg, "Rainfall": rainfall}
 
     
@@ -157,3 +157,6 @@ def predict():
         'economic': gbpPredictions  # Economic predictions
     }
 
+@app.errorhandler(404)
+def not_found(e):
+    return app.send_static_file('index.html')

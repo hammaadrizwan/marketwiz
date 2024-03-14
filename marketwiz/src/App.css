@@ -3,22 +3,75 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: "CocoSharp Trial";
-  src: url(../assets/fonts/Coco-Sharp-Regular-trial.ttf);
+  font-family: 'CocoSharp Trial';
+  src: url('./assets/fonts/CocoSharpTrial-Regular.eot');
+  src: url('./assets/fonts/CocoSharpTrial-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/CocoSharpTrial-Regular.woff2') format('woff2'),
+      url('./assets/fonts/CocoSharpTrial-Regular.woff') format('woff'),
+      url('./assets/fonts/Coco-Sharp-Regular-trial.ttf') format('truetype'),
+      url('./assets/fonts/CocoSharpTrial-Regular.svg#CocoSharpTrial-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Poppins";
-  src: url(../assets/fonts/Poppins-Meduim.ttf);
+  font-family: 'CocoSharp Trial';
+  src: url('assets/fonts/CocoSharpTrial-Extrabold.eot');
+  src: url('assets/fonts/CocoSharpTrial-Extrabold.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/CocoSharpTrial-Extrabold.woff2') format('woff2'),
+      url('assets/fonts/CocoSharpTrial-Extrabold.woff') format('woff'),
+      url('assets/fonts/CocoSharpTrial-Extrabold.ttf') format('truetype'),
+      url('assets/fonts/CocoSharpTrial-Extrabold.svg#CocoSharpTrial-Extrabold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: 'CocoSharp Trial';
+  src: url('assets/fonts/CocoSharpTrial-Bold.eot');
+  src: url('assets/fonts/CocoSharpTrial-Bold.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/CocoSharpTrial-Bold.woff2') format('woff2'),
+      url('assets/fonts/CocoSharpTrial-Bold.woff') format('woff'),
+      url('assets/fonts/CocoSharpTrial-Bold.ttf') format('truetype'),
+      url('assets/fonts/CocoSharpTrial-Bold.svg#CocoSharpTrial-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins-Medium.eot');
+  src: url('assets/fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/Poppins-Medium.woff2') format('woff2'),
+      url('assets/fonts/Poppins-Medium.woff') format('woff'),
+      url('assets/fonts/Poppins-Medium.ttf') format('truetype'),
+      url('assets/fonts/Poppins-Medium.svg#Poppins-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Product Sans';
+  src: url('assets/fonts/ProductSans-Bold.eot');
+  src: url('assets/fonts/ProductSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/ProductSans-Bold.woff2') format('woff2'),
+      url('assets/fonts/ProductSans-Bold.woff') format('woff'),
+      url('assets/fonts/ProductSans-Bold.ttf') format('truetype'),
+      url('assets/fonts/ProductSans-Bold.svg#ProductSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 
 body {
   margin: 0;
   font-family: "CocoSharp Trial";
 }
 
-.api{
-  font-family: "Poppins";
-}
 .nav{
   display: flex;
   background: #28292B;
@@ -411,7 +464,7 @@ body {
   width: 378px;
   height: 63px;
   flex-shrink: 0;
-  font-family: Poppins;
+  font-family: "Poppins";
   border-radius: 40px;
   background: #D9D9D9;
   color: rgba(9, 2, 2, 0.54);
