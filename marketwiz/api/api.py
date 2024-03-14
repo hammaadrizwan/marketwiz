@@ -19,7 +19,17 @@ def index():
 
 @app.route('/api/time')
 def get_current_time():
-    return {'time': time.time()}
+    current_time = time.time()
+    hour = int(time.strftime('%H', time.localtime(current_time)))
+    if 6 <= hour < 12:
+        time_type = "Morning"
+    elif 12 <= hour < 18:
+        time_type = "Afternoon"
+    elif 18 <= hour < 22:
+        time_type = "Evening"
+    else:
+        time_type = "Night"
+    return {'time': current_time, 'time_type': time_type}
 
 
 @app.route('/api/ml')
@@ -138,7 +148,7 @@ def predict():
     sales = []
 
     for index, row in results.iterrows():
-        sales.append({"Product Name": row["Product Name"], "Units Sold": row["Units Sold"]})
+        sales.append({"Product_Name": row["Product Name"], "Units_Sold": row["Units Sold"]})
 
     shutil.rmtree(local_directory)
     

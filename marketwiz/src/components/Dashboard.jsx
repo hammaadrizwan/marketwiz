@@ -3,20 +3,27 @@ import Navbar from './Navbar';
 import ReactLoading from 'react-loading';
 import Lottie from "react-lottie";
 import Footer from './Footer'
+import * as animationData from '../Animation - 1710403906479.json';
 
 function Dashboard() {
     const [currentTime, setCurrentTime] = useState(0);
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true); // Initialize loading state to true
-    const [completed, setCompleted] = useState(false); // Initialize completed state to false
+    const [sortedSales, setSortedSales] = useState([]);
+    const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+    
+    if (!userDetails || !userDetails.name) {
+        // Redirect to login page or display message
+        return (<div className='error-404'><p className='error-404-text'>404 Bad Request</p></div>);
+    }
+    
     const defaultOptions1 = {
         loop: true,
         autoplay: true,
-        animationData: location.default,
+        animationData: animationData.default,
         rendererSettings: {
           preserveAspectRatio: "xMidYMid slice",
         },
-    };
+      };
 
     const [done, setDone] = useState(false);
     useEffect(() => {
@@ -24,28 +31,34 @@ function Dashboard() {
         .then(res => res.json())
         .then(data => {
           setData(data);
+          const sortedData = data.sales.sort((a, b) => b.Units_Sold - a.Units_Sold);
+          setSortedSales(sortedData);
           setDone(true);
         });
     }, []);
+
+    useEffect(() => {
+      fetch('/api/time').then(res => res.json()).then(data => {
+        setCurrentTime(data.time_type);
+      });
+    }, []);
     
-    const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-    if (!userDetails || !userDetails.name) {
-        // Redirect to login page or display message
-        return (<div className='error-404'><p className='error-404-text'>404 Bad Request</p></div>);
-    }
+
 
     return (
         <>
-            {!done ? (
+            {!done ? 
+            (<div className="loader">
                 <div className="loader-container">
-                    <ReactLoading type={'spin'} color={'#007bff'} height={50} width={50} />
-                    <p>Loading...</p>
+                    <Lottie options={defaultOptions1} background="#28292B" speed={1} height={300} width={300} />
+                    <p>Fetching Data</p>
+                </div>
                 </div>) : (
       <>
       <Navbar />
       <div className="dashboard">
       <div className='greeting'>
-          <h1>Good afternoon,  {userDetails.name.split(" ")[0]}</h1>
+          <h1>Good {currentTime},  {userDetails.name.split(" ")[0]}</h1>
       </div>
   
       <div className='predictions-card-wrapper'>
@@ -115,45 +128,36 @@ function Dashboard() {
                               <div className='small-table-first-box'/>
                               <div className='small-table-first-text'>
                                   <span className='small-table-first-text-span'>
-                                      Ambewela Yoghurt
+                                      {sortedSales[0].Product_Name}
                                   </span>
                                   <br/>
-                                  <span className='small-table-first-val-span'>
-                                      80ML
-                                  </span>
                               </div>
                               <div className='small-table-first-quantity'>
-                                  <p>20</p>
+                                  <p>{sortedSales[0].Units_Sold}</p>
                               </div>
                           </div>
                           <div className='small-table-second'>
                               <div className='small-table-second-box'/>
                               <div className='small-table-second-text'>
                                   <span className='small-table-second-text-span'>
-                                      Prima Wheat Flour
+                                    {sortedSales[1].Product_Name}
                                   </span>
                                   <br/>
-                                  <span className='small-table-second-val-span'>
-                                      1KG
-                                  </span>
                               </div>
                               <div className='small-table-second-quantity'>
-                                  <p>18</p>
+                                  <p>{sortedSales[1].Units_Sold}</p>
                               </div>
                           </div>
                           <div className='small-table-third'>
                               <div className='small-table-third-box'/>
                               <div className='small-table-third-text'>
                                   <span className='small-table-third-text-span'>
-                                      Harischandra Coffee
+                                      {sortedSales[2].Product_Name}
                                   </span>
                                   <br/>
-                                  <span className='small-table-third-val-span'>
-                                      250G
-                                  </span>
                               </div>
                               <div className='small-table-third-quantity'>
-                                  <p>7</p>
+                                  <p>{sortedSales[2].Units_Sold}</p>
                               </div>
                           </div>
                       </div>

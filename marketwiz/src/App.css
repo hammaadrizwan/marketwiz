@@ -1197,252 +1197,6 @@ flex-shrink: 0;
   justify-content: center;
   flex-shrink: 0;
   }
-  /* Predicting the price section 
-  .price-predict{
-    width: 449px; 
-    height: 367px; 
-    padding-top: 18px; 
-    padding-bottom: 29px; 
-    padding-left: 32px; 
-    background: #232323; 
-    border-radius: 50px; 
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 14px; 
-    display: inline-flex;
-  }
-  
-  .price-predict-heading{
-    width: 429px; 
-    height: 102px; 
-    padding-top: 9px; 
-    padding-left: 6px; 
-    border-radius: 50px; 
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 29px; 
-    display: inline-flex;
-  }
-  
-  .price-predict-heading-text{
-    width: 321px; 
-    color: white; 
-    font-size: 25px;  
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word
-  }
-  
-  .predict-price-inputs{
-    width: 398px; 
-    height: 114px; 
-    padding-left: 1px; 
-    padding-right: 4px; 
-    border-radius: 50px; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: flex-start; 
-    display: inline-flex;
-  }
-  
-  .predict-price-inputs-header{
-    width: 386px; 
-    height: 28px; 
-    border-radius: 50px; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 101px; 
-    display: inline-flex;
-  }
-  
-  .today-price-header{
-    width: 149px; 
-    height: 22px; 
-    color: #ADADAD; 
-    font-size: 20px;  
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .no-of-days-price-header{
-    width: 124px; 
-    height: 20px; 
-    color: #ADADAD; 
-    font-size: 20px; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .predict-price-input-boxes{
-    width: 386px; 
-    height: 74px; 
-    border-radius: 50px; 
-    justify-content: center; 
-    align-content: space-between;
-    gap: 15px; 
-    display: inline-flex;
-  }
-  
-  .predict-price-input-boxes-cover{
-    width: 240px; 
-    height: 54px; 
-    position: relative;
-  }
-  
-  .predict-price-input-box-lkr-1{
-    width: 240px; 
-    height: 53.16px; 
-    left: 0px; 
-    top: 0.84px; 
-    position: absolute; 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02) inset; 
-    border-radius: 15px; 
-    border: 1px #EAEAEA solid;
-  }
-  
-  .predict-price-input-box-lkr-2{
-    width: 183.26px; 
-    height: 36.28px; 
-    left: 94px; 
-    top: 9.28px; 
-    position: absolute;
-  }
-  
-  .predict-price-input-box-lkr-val-span{
-    color: #ADADAD; 
-    font-size: 25px; 
-    font-family: Poppins; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .predict-price-input-box-lkr-currency-span{
-    color: #ADADAD; 
-    font-size: 25px; 
-    font-family: Poppins; 
-    font-weight: 500; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .predict-price-input-box-days{
-    width: 130px; 
-    height: 53px; 
-    position: relative;
-    align-content: space-between;
-    justify-content: center;
-  }
-  
-  .predict-price-input-box-days-cover{
-    width: 126.32px; 
-    height: 53px; 
-    left: 0px; 
-    top: 0px; 
-    position: absolute; 
-    border-radius: 12px; 
-    border: 1px white solid;
-  }
-  
-  .predict-price-input-box-days-minus{
-    width: 31.89px; 
-    height: 23.94px; 
-    left: 11.04px; 
-    top: 13.68px; 
-    position: absolute; 
-    color: #ADADAD; 
-    font-size: 25px; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .predict-price-input-box-days-val{
-    width: 31.89px; 
-    height: 23.94px; 
-    left: 96.89px; 
-    top: 14.53px; 
-    position: absolute; 
-    color: #ADADAD; 
-    font-size: 25px; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .predict-price-input-box-days-plus{
-    width: 31.89px; 
-    height: 23.94px; 
-    left: 53.96px; 
-    top: 13.68px; 
-    position: absolute; 
-    color: #ADADAD; 
-    font-size: 25px; 
-    font-family: Poppins; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .predict-price-button{
-    width: 383px; 
-    height: 64px; 
-    border-radius: 50px; 
-    justify-content: flex-start; 
-    align-items: flex-end; 
-    gap: 43px; 
-    display: inline-flex;
-  }
-  
-  .predict-price-button-cover{
-    width: 144px; 
-    height: 64px; 
-    position: relative;
-  }
-  
-  .predict-price-button-top{
-    width: 142.48px; 
-    height: 64px; 
-    left: 0.38px; 
-    top: 0px; 
-    position: absolute; 
-    background: #FBFBFB; 
-    border-radius: 15px;
-  }
-  
-  .predict-price-button-text{
-    width: 99px; 
-    height: 27.04px; 
-    left: 26.50px; 
-    top: 13.52px; 
-    position: absolute; 
-    color: black; 
-    font-size: 25px; 
-    font-family: Poppins; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .predict-price-value{
-    width: 196px; 
-    height: 64px; 
-    color: white; 
-    font-size: 60px; 
-    font-family: Poppins; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  */
-  
-  
-  
   
   
   /* Sales Prediction small table */
@@ -1520,6 +1274,7 @@ flex-shrink: 0;
   }
   
   .small-table-first-text{
+    font-family: "Product Sans";
     width: 259.30px; 
     height: 66.95px; 
     left: 18.86px; 
@@ -1528,20 +1283,14 @@ flex-shrink: 0;
   }
   
   .small-table-first-text-span{
+    font-family: "Product Sans"; 
     color: #181818; 
-    font-size: 25px; 
+    font-size: 22px; 
     font-weight: 700; 
     text-transform: capitalize; 
     word-wrap: break-word;
   }
-  
-  .small-table-first-val-span{
-    color: #181818; 
-    font-size: 25px; 
-    font-family:Product Sans; 
-    font-weight: 700; text-transform: capitalize; 
-    word-wrap: break-word;
-  }
+
   
   .small-table-first-quantity{
     left: 328.14px; 
@@ -1549,10 +1298,10 @@ flex-shrink: 0;
     position: absolute; 
     color: black; 
     font-size: 56px; 
-    font-family: Product Sans; 
     font-weight: 700; 
     text-transform: capitalize; 
     word-wrap: break-word;
+    font-family: "Product Sans"; 
   }
   
   .small-table-second{
@@ -1585,20 +1334,13 @@ flex-shrink: 0;
     font-weight: 700; 
     text-transform: capitalize; 
     word-wrap: break-word;
+    font-family: "Product Sans"; 
   }
   
-  .small-table-second-val-span{
-    color: #181818; 
-    font-size: 25px; 
-    font-family: Product Sans; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
   
   .small-table-second-quantity{
-    left: 330.03px; 
-    top: 24.21px; 
+    left: 328.14px; 
+    top: 16.74px; 
     position: absolute; 
     color: black; 
     font-size: 56px; 
@@ -1627,35 +1369,28 @@ flex-shrink: 0;
   .small-table-third-text{
     width: 244.85px; 
     height: 63.79px; 
-    left: 21.49px; 
-    top: 22.33px; 
+    left: 21.44px; 
+    top: 18.95px; 
     position: absolute;
   }
   
   .small-table-third-text-span{
     color: #181818; 
-    font-size: 25px;  
+    font-size: 22px;  
     font-weight: 700; 
     text-transform: capitalize; 
     word-wrap: break-word;
+    font-family: "Product Sans"; 
   }
   
-  .small-table-third-val-span{
-    color: #181818; 
-    font-size: 25px; 
-    font-family: Product Sans; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
   
   .small-table-third-quantity{
-    left: 347.65px; 
-    top: 13.82px; 
+    left: 328.14px; 
+    top: 16.74px; 
     position: absolute; 
     color: black; 
     font-size: 56px; 
-    font-family: Product Sans; 
+    font-family: "Product Sans"; 
     font-weight: 700; 
     text-transform: capitalize; 
     word-wrap: break-word;
@@ -2022,7 +1757,25 @@ flex-shrink: 0;
     text-decoration: underline;
   }
   
-  
+  .loader-container{
+    background: #28292B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    
+  }
+  .loader-container>p{
+    font-family: "CocoSharp Trial";
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+  }
+  .loader{
+    background: #28292B;
+    padding: 240px 250px;
+    
+  }
 /* FOOTER STLYE*/
 .footer{
   display: flex;
