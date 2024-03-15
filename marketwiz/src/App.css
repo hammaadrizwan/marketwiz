@@ -1431,8 +1431,10 @@ flex-shrink: 0;
   }
   
   .full-tables-sales-cover{
+    display: flex;
+    flex-direction: column;
     width: 929.08px; 
-    height: 443px; 
+    height: 880px; 
     left: 9.92px; 
     top: 0px; 
     position: absolute; 
@@ -1440,45 +1442,19 @@ flex-shrink: 0;
     border-radius: 53px;
   }
   
-  .first-product{
-    display:flex;
-    flex-direction: row;
-    width: 356.96px; 
-    height: 30.72px; 
-    left: 75.36px; 
-    top: 117.94px; 
-    position: absolute;
-  }
-  
-  .first-product>p{
-    margin-left:5px;
-  }
-  
-  .first-product-name-span{
-    color: white; 
+  .product-name{
+    color: white;
+    font-family: "Product Sans";  
     font-size: 25px; 
     font-weight: 700; 
     text-transform: capitalize; 
-    word-wrap: break-word;
   }
-  
-  .first-product-val-span{
-    color: white; 
-    font-size: 25px; 
-    font-family: Product Sans; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .second-product{
+
+  .product-div{
     display:flex;
-    flex-direction: row;
     width: 356.96px; 
     height: 30.72px; 
-    left: 75.36px; 
-    top: 178.39px; 
-    position: absolute;
+    padding: 1px;
   }
   
   .second-product>p{
@@ -1511,28 +1487,7 @@ flex-shrink: 0;
     top: 242.81px; 
     position: absolute;
   }
-  
-  .third-product>p{
-    margin-left:5px;
-  }
-  
-  .third-product-name-span{
-    color: white; 
-    font-size: 25px; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
-  .third-product-val-span{
-    color: white; 
-    font-size: 25px; 
-    font-family: Product Sans; 
-    font-weight: 700; 
-    text-transform: capitalize; 
-    word-wrap: break-word;
-  }
-  
+
   .fourth-product{
     display:flex;
     flex-direction: row;

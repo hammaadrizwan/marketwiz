@@ -175,56 +175,152 @@ function Dashboard() {
   
                   <div className='full-table-sales'>
                       <div className='full-tables-sales-cover'/>
-                      <div className='first-product'>
-                          <span className='first-product-name-span'>
-                              Ambewela Yoghurt
+                      <div className='product-div'>
+                          <span className='product-name'>
+                              {sortedSales[0].Product_Name}
                           </span>
-                          <p> </p>
-                          <span className='first-product-val-span'>
-                              80ML
-                          </span>
-                          <br/>
                       </div>
-                      <div className='second-product'>
-                          <span className='second-product-name-span'>
-                              Highland Set Yoghurt
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[1].Product_Name}
                           </span>
-                          <p> </p>
-                          <span className='second-product-val-span'>
-                              80ML
-                          </span>
-                          <br/>
                       </div>
-                      <div className='third-product'>
-                          <span className='third-product-name-span'>
-                              Prima Wheat Flour
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[2].Product_Name}
                           </span>
-                          <p> </p>
-                          <span className='third-product-val-span'>
-                              1KG
-                          </span>
-                          <br/>
                       </div>
-                      <div className='fourth-product'>
-                          <span className='fourth-product-name-span'>
-                              Harischa. Coffee
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[3].Product_Name}
                           </span>
-                          <p> </p>
-                          <span className='fourth-product-val-span'>
-                              250G
-                          </span>
-                          <br/>
                       </div>
-                      <div className='fifth-product'>
-                          <span className='fifth-product-name-span'>
-                              Elephant House Vanilla Ice Cream
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[4].Product_Name}
                           </span>
-                          <p> </p>
-                          <span className='fifth-product-val-span'>
-                              1L
-                          </span>
-                          <br/>
                       </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                              {sortedSales[5].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[6].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[7].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[8].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[9].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                              {sortedSales[10].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[11].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[12].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[13].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[14].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                              {sortedSales[15].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[16].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[17].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[18].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[19].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                              {sortedSales[20].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[21].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[22].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[23].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[24].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                              {sortedSales[25].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[26].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[27].Product_Name}
+                          </span>
+                      </div>
+                      <div className='product-div'>
+                          <span className='product-name'>
+                          {sortedSales[28].Product_Name}
+                          </span>
+                      </div>
+
   
                       <div className='first-product-quantity'>
                           <p>20</p>
