@@ -166,191 +166,22 @@ function Dashboard() {
           </div>
       </div>
   
-      <div className='full-table-wrapper'>
-          <div className='full-table'>
-              <div className='units-full'>
-                  <div className='units-full-title'>
-                      <p>Predicted Units Sold For Today</p>
-                  </div>
-  
-                  <div className='full-table-sales'>
-                      <div className='full-tables-sales-cover'/>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                              {sortedSales[0].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[1].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[2].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[3].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[4].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                              {sortedSales[5].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[6].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[7].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[8].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[9].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                              {sortedSales[10].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[11].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[12].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[13].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[14].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                              {sortedSales[15].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[16].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[17].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[18].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[19].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                              {sortedSales[20].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[21].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[22].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[23].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[24].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                              {sortedSales[25].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[26].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[27].Product_Name}
-                          </span>
-                      </div>
-                      <div className='product-div'>
-                          <span className='product-name'>
-                          {sortedSales[28].Product_Name}
-                          </span>
-                      </div>
-
-  
-                      <div className='first-product-quantity'>
-                          <p>20</p>
-                      </div>
-                      <div className='second-product-quantity'>
-                          <p>11</p>
-                      </div>
-                      <div className='third-product-quantity'>
-                          <p>14</p>
-                      </div>
-                      <div className='fourth-product-quantity'>
-                          <p>8</p>
-                      </div>
-                      <div className='fifth-product-quantity'>
-                          <p>5</p>
-                      </div>
-                      <div className='full-sales-table-header'>
-                          <div className='full-sales-table-header-cover-1'/>
-                          <div className='full-sales-table-header-cover-2'/>
-                      </div>
-                      <div className='full-sales-table-left-header'>
-                          Product Name
-                      </div>
-                      <div className='full-sales-table-right-header'>
-                          Units Sold
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>   
+      <div className='overflow-y-scroll no-scrollbar table-container '><table>
+            <thead>
+                    <tr>
+                        <th className='table-header'>Product Name</th>
+                        <th className='table-header'>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {sortedSales.map((sale, index) => (
+                        <tr key={index}>
+                            <td>{sale.Product_Name}</td>
+                            <td>{sale.Units_Sold}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table></div>
       </div>
       </>
       )

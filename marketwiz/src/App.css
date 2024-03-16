@@ -894,11 +894,11 @@ flex-shrink: 0;
   .dashboard{
     display: flex;
   height: 1333px;
-  padding: 34px 120px 62px 122px;
+  padding: 34px 120px 100px 120px;
   flex-direction: column;
   align-items: center;
-  gap: 55px;
-  align-self: stretch;
+
+  align-self: center;
     background: radial-gradient(60.43% 34.02% at 66.88% 70.46%, rgba(176, 54, 54, 0.34) 0%, rgba(255, 153, 0, 0.31) 0%, rgba(198, 255, 177, 0.26) 0.01%, rgba(213, 255, 144, 0.34) 0.02%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(59.07% 59.65% at 27.25% 44.86%, rgba(161, 214, 200, 0.52) 0%, rgba(0, 0, 0, 0.00) 100%), #28292B;
   }
   
@@ -907,10 +907,12 @@ flex-shrink: 0;
     text-align: center;
     font-weight: bold;
     font-size: 45px;
+    margin-top: 20px;
   }
   
   /* All the predictions section */
   .predictions-card-wrapper{
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1279,6 +1281,7 @@ flex-shrink: 0;
     height: 66.95px; 
     left: 18.86px; 
     top: 21.20px; 
+    text-transform: capitalize; 
     position: absolute;
   }
   
@@ -1404,7 +1407,6 @@ flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
   .full-table{
     width: 951px; 
@@ -1426,15 +1428,13 @@ flex-shrink: 0;
   
   .full-table-sales{
     width: 939px; 
-    height: 443px; 
+    height: 543px; 
     position: relative;
   }
   
   .full-tables-sales-cover{
-    display: flex;
-    flex-direction: column;
     width: 929.08px; 
-    height: 880px; 
+    height: 743px; 
     left: 9.92px; 
     top: 0px; 
     position: absolute; 
@@ -1442,19 +1442,43 @@ flex-shrink: 0;
     border-radius: 53px;
   }
   
-  .product-name{
-    color: white;
-    font-family: "Product Sans";  
+  .first-product{
+    display:flex;
+    width: 480.96px; 
+    height: 30.72px; 
+    left: 75.36px; 
+    top: 117.94px; 
+    position: absolute;
+  }
+  
+  .first-product>p{
+    margin-left:5px;
+  }
+  
+  .first-product-name-span{
+    color: white; 
     font-size: 25px; 
     font-weight: 700; 
     text-transform: capitalize; 
   }
-
-  .product-div{
+  
+  .first-product-val-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .second-product{
     display:flex;
+    flex-direction: row;
     width: 356.96px; 
     height: 30.72px; 
-    padding: 1px;
+    left: 75.36px; 
+    top: 178.39px; 
+    position: absolute;
   }
   
   .second-product>p{
@@ -1487,7 +1511,28 @@ flex-shrink: 0;
     top: 242.81px; 
     position: absolute;
   }
-
+  
+  .third-product>p{
+    margin-left:5px;
+  }
+  
+  .third-product-name-span{
+    color: white; 
+    font-size: 25px; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
+  .third-product-val-span{
+    color: white; 
+    font-size: 25px; 
+    font-family: Product Sans; 
+    font-weight: 700; 
+    text-transform: capitalize; 
+    word-wrap: break-word;
+  }
+  
   .fourth-product{
     display:flex;
     flex-direction: row;
@@ -1731,6 +1776,50 @@ flex-shrink: 0;
     padding: 240px 250px;
     
   }
+.table-header{
+  font-size: 26px;
+}
+.table-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 60px;
+  background: #28292B;
+  padding: 28px 0px;
+  border-radius: 40px;
+  height: 100%;
+}
+  table{
+    margin-top: -50px;
+  font-family: "Product Sans";
+  font-size: 21px;
+  
+
+}
+  th:first-of-type {
+    border-top-left-radius: 40px;
+    background-color: #E3E87C;
+  }
+  th:last-of-type {
+    border-top-right-radius: 40px;
+    background-color: #E3E87C;
+  }
+  tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 40px;
+    background: #28292B;
+  }
+  tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 40px;
+    background: #28292B;
+  }
+td{
+  margin-top: 20px;
+  background: #28292B;
+  color: white;
+  text-align: center;
+}
+  td,th{padding: 30px 98px 15px 94px; }
 /* FOOTER STLYE*/
 .footer{
   display: flex;
