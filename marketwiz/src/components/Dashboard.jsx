@@ -9,6 +9,8 @@ function Dashboard() {
     const [currentTime, setCurrentTime] = useState(0);
     const [data, setData] = useState([]);
     const [sortedSales, setSortedSales] = useState([]);
+   
+
     const userDetails = JSON.parse(localStorage.getItem('userDetails'));
     
     if (!userDetails || !userDetails.name) {
@@ -26,6 +28,9 @@ function Dashboard() {
       };
 
     const [done, setDone] = useState(false);
+
+    const [economicData, setEconomicData] = useState([]);
+    const [prediction, setPrediction] = useState(null);
     useEffect(() => {
       fetch('/api/ml')
         .then(res => res.json())
@@ -33,6 +38,7 @@ function Dashboard() {
           setData(data);
           const sortedData = data.sales.sort((a, b) => b.Units_Sold - a.Units_Sold);
           setSortedSales(sortedData);
+          setEconomicData(data.economic);
           setDone(true);
         });
     }, []);
@@ -43,7 +49,21 @@ function Dashboard() {
       });
     }, []);
     
-
+    const handleFormSubmit = (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+      
+        // Get the input values
+        const price = parseFloat(document.getElementById('price-input').value);
+        const days = parseInt(document.getElementById('day-input').value);
+      
+        // Perform the calculation
+        const today_rate = economicData[1];
+        const nth_day_rate = economicData[days];
+        const predictionResult = Math.floor(nth_day_rate * (price / today_rate)*100)/100;
+      
+        // Set the prediction result to state
+        setPrediction(predictionResult);
+      };
 
     return (
         <>
@@ -88,7 +108,7 @@ function Dashboard() {
                           <p>Predict The Price of A Product (LKR)</p>
                       </div>
   
-                      <form className='dashboard-form-input'>
+                      <form className='dashboard-form-input'onSubmit={handleFormSubmit}>
                           <div className='dashboard-form-input-title'>
                               <label>Todays Price</label>
                               <label>No of Days</label>
@@ -96,17 +116,17 @@ function Dashboard() {
                           </div>
                           <div className='dashboard-form-input-frame'>
                               <div className='dashboard-form-input-frame-price'>
-                                  <input type='text' className="dashboard-form-input-frame-price-input"
+                                  <input id="price-input"type='text' className="dashboard-form-input-frame-price-input"
                                   placeholder='120.00'/>
                               </div>
                               <div className='dashboard-form-input-frame-days'>
-                              <input type='text' className="dashboard-form-input-frame-days-input"
+                              <input id="day-input" type='text' className="dashboard-form-input-frame-days-input"
                                   placeholder='3'/>
                               </div>
                           </div>
                           <div className='dashboard-form-input-frame-footer'>
                             <input type='submit' value='Predict' className='dashboard-form-input-frame-footer-submit'id="buttong-bg"/> 
-                            <label className='dashboard-form-input-frame-footer-value'>124.34</label>
+                            <label id="display-prediction" className='dashboard-form-input-frame-footer-value'>{prediction}</label>
                           </div>
   
   
